@@ -1,0 +1,51 @@
+.about-section {
+  flex: 1;
+  padding: 60px 20px;
+}
+.row {
+  margin-bottom: 30px;
+}
+
+.about-me {
+  margin-bottom: 30px;
+}
+
+.about-section h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.about-section h3 span {
+  color: #0ba376;
+}
+
+.infos div {
+  margin-bottom: 10px;
+}
+.infos span {
+  margin-right: 10px;
+}
+
+.skills-content {
+  margin: 10px 0;
+}
+
+.skills-content h4 {
+  display: flex;
+  line-height: 40px;
+}
+.skills-content h4 i {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  margin-right: 30px;
+  color: #0ba376;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  .about-section {
+    padding: 30px 150px;
+  }
+}

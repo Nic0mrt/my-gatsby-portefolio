@@ -1,0 +1,91 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0px 20px;
+}
+
+.home h3 {
+  text-align: center;
+  font-size: 48px;
+  color: #222222;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
+.home h3 span {
+  color: #0ba376;
+}
+
+.home h2 {
+  text-align: center;
+}
+
+.home p {
+  color: #888888;
+  margin-top: 5px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.logos i {
+  display: block;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0 10px;
+}
+.react {
+  color: #81d9f7;
+}
+.node-js {
+  color: #4f9b43;
+}
+.js {
+  color: #f7df1e;
+}
+
+.go-to-btns-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-to-btns-wrapper .btn {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #ffffff;
+  background-color: #0ba376;
+  color: white;
+  margin: 10px 10px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.go-to-btns-wrapper .btn:hover {
+  border: solid 2px #0ba376;
+  background-color: #fff;
+  color: #0ba376;
+}
+
+@media screen and (min-width: 640px) {
+  .go-to-btns-wrapper {
+    flex-direction: row;
+  }
+}

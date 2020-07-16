@@ -1,0 +1,13 @@
+html,
+body,
+#gatsby-focus-wrapper,
+#___gatsby {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  height: 100%;
+}
+
+div[role="group"][tabindex] {
+  height: 100%;
+}

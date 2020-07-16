@@ -1,0 +1,47 @@
+.postcard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.postcard__image {
+  margin-right: 30px;
+  width: 100%;
+}
+
+.postcard__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.postcard__content__title {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.postcard__content__pusblished-at {
+  margin-top: 0;
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 640px) {
+  .postcard__image {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .postcard {
+    flex-direction: row;
+  }
+  .postcard__image {
+    width: 400px;
+    height: 200px;
+  }
+
+  .postcard__content {
+    width: 300px;
+  }
+}
