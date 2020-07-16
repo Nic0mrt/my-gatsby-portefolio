@@ -3,8 +3,7 @@ import { graphql } from "gatsby"
 import "./article.css"
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
-
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
 export const query = graphql`
   query ArticleQuery($id: String) {
@@ -31,7 +30,6 @@ const Article = ({ data }) => {
             publié le{" "}
             <Moment format="MMMM Do YYYY">{article.published_at}</Moment>
           </p>
-
           <img className="article__image" src={article.image.publicURL}></img>
           <ReactMarkdown source={article.content} />
         </div>
