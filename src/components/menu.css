@@ -3,7 +3,7 @@
 }
 
 .menu-icon {
-  position: absolute;
+  position: fixed;
   height: 48px;
   width: 48px;
   border-radius: 30px;
@@ -59,7 +59,7 @@
   height: 100%;
   box-sizing: border-box;
   width: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #0ba376;
@@ -80,7 +80,7 @@
   .menu {
     position: relative;
     display: flex;
-    height: 150px;
+    height: 100px;
     width: 100%;
   }
   .menu.open {

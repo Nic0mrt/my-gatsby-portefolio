@@ -8,11 +8,14 @@
   font-size: 1.5rem;
 }
 
-.article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.article__content {
+  display: block;
+}
+
+.article__content img {
+  width: 70%;
+  display: block;
+  margin: auto;
 }
 
 .article__date {

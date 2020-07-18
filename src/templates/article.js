@@ -25,12 +25,12 @@ const Article = ({ data }) => {
     <Layout>
       <div className="article-section">
         <h3>{article.title}</h3>
-        <div className="article">
-          <p className="article__date">
-            publié le{" "}
-            <Moment format="MMMM Do YYYY">{article.published_at}</Moment>
-          </p>
-          <img className="article__image" src={article.image.publicURL}></img>
+        <p className="article__date">
+          publié le{" "}
+          <Moment format="MMMM Do YYYY">{article.published_at}</Moment>
+        </p>
+        <img className="article__image" src={article.image.publicURL}></img>
+        <div className="article__content">
           <ReactMarkdown source={article.content} />
         </div>
       </div>
