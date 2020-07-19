@@ -40,6 +40,11 @@
   bottom: -50px;
 }
 
+.phone-contact svg {
+  height: 16px;
+  width: 16px;
+}
+
 @media screen and (min-width: 640px) {
   .contact-section {
     padding: 30px 150px;

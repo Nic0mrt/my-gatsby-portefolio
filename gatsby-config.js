@@ -7,8 +7,10 @@ module.exports = {
     title: `Nicolas MARET, Développeur Web React sur Lyon`,
     description: `Je suis Nicolas MARET Développeur Web Fullstack React et NodeJS basé à Lyon`,
     author: `@nicolasmaret`,
+    siteUrl: `https://nicolas-maret-portefolio.netlify.app/`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
