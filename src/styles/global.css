@@ -11,3 +11,8 @@ body,
 div[role="group"][tabindex] {
   height: 100%;
 }
+
+*:focus {
+  outline: 0;
+  outline: none;
+}

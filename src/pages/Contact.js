@@ -9,7 +9,9 @@ import { Toast, ToastBody, ToastHeader } from "reactstrap"
 const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
   const [message, setMessage] = useState("")
+
   const [isLoading, setIsLoading] = useState(false)
   const [toastStatus, setToastStatus] = useState("")
   const [toastMessage, setToastMessage] = useState("")
@@ -22,23 +24,28 @@ const Contact = () => {
     const formData = new FormData()
     formData.append("name", name)
     formData.append("email", email)
+    formData.append("phoneNumber", phoneNumber)
     formData.append("message", message)
+    try {
+      const res = await fetch("https://formspree.io/xqkywelk", {
+        headers: {
+          Accept: "application/json",
+        },
+        method: "POST",
+        body: formData,
+      })
 
-    const res = await fetch("https://formspree.io/xqkywelk", {
-      headers: {
-        Accept: "application/json",
-      },
-      method: "POST",
-      body: formData,
-    })
-
-    if (res.status === 200) {
-      form.reset()
-      showToast()
-    } else {
+      if (res.status === 200) {
+        form.reset()
+        showToast()
+      } else {
+        showToast(false)
+      }
+      setIsLoading(false)
+    } catch (error) {
       showToast(false)
+      setIsLoading(false)
     }
-    setIsLoading(false)
   }
 
   const handleInputChange = e => {
@@ -49,6 +56,9 @@ const Contact = () => {
         break
       case "email":
         setEmail(e.target.value)
+        break
+      case "phoneNumer":
+        setPhoneNumber(e.target.value)
         break
       default:
         setMessage(e.target.value)
@@ -107,6 +117,19 @@ const Contact = () => {
                 type="email"
                 className="form-control"
                 aria-describedby="emailHelp"
+                onChange={handleInputChange}
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label htmlFor="phoneNumber">
+              Numéro de téléphone :
+              <input
+                required
+                name="phoneNumber"
+                type="tel"
+                className="form-control"
+                aria-describedby="Téléphone"
                 onChange={handleInputChange}
               />
             </label>

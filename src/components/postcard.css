@@ -19,6 +19,8 @@
 .postcard__content__title {
   margin-bottom: 10px;
   margin-top: 0;
+  color: #0ba376;
+  font-size: 1.2rem;
 }
 
 .postcard__content__pusblished-at {

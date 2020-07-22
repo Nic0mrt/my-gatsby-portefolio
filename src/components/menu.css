@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.menu-icon {
+.menu-icon-button {
   position: fixed;
   height: 48px;
   width: 48px;
@@ -18,7 +18,7 @@
   cursor: pointer;
   z-index: 10000;
 }
-.menu-icon span {
+.menu-icon-button span {
   position: absolute;
   height: 3px;
   width: 24px;
@@ -41,16 +41,16 @@
   top: 26px;
 }
 
-.menu-icon.active .first-bar {
+.menu-icon-button.active .first-bar {
   transform: rotate(45deg);
   top: 20px;
 }
 
-.menu-icon.active .second-bar {
+.menu-icon-button.active .second-bar {
   opacity: 0;
 }
 
-.menu-icon.active .third-bar {
+.menu-icon-button.active .third-bar {
   transform: rotate(-45deg);
   top: 20px;
 }
@@ -74,7 +74,7 @@
 }
 
 @media screen and (min-width: 640px) {
-  .menu-icon {
+  .menu-icon-button {
     display: none;
   }
   .menu {

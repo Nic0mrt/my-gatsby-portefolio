@@ -36,15 +36,6 @@ const Header = props => {
         </li>
         <li>
           <Link
-            to="/Cv"
-            activeClassName="active"
-            activeStyle={{ color: "white" }}
-          >
-            CV
-          </Link>
-        </li>
-        <li>
-          <Link
             to="/Projects"
             activeClassName="active"
             activeStyle={{ color: "white" }}

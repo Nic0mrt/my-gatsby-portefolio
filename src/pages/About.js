@@ -7,7 +7,7 @@ import {
   faMobileAlt,
   faDesktop,
   faServer,
-  faShoppingCart,
+  faCloud,
 } from "@fortawesome/free-solid-svg-icons"
 
 const About = () => {
@@ -21,13 +21,24 @@ const About = () => {
 
         <div className="row">
           <div className="col-sm-12 col-md-6 about-me">
-            <p>
-              Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue
-              elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex
-              justo, faucibus ut mi in, condimentum finibus dolor. Aliquam vitae
-              hendrerit dolor, eget imperdiet mauris. Maecenas et ante id ipsum
-              condimentum dictum et vel massa. Ut in imperdiet dolor, vel
-              consectetur dui.
+            <p className="about__paragraph">
+              Diplômé d'un <span>DUT informatique</span> et d'un Master en
+              management et après 6 ans dans le recrutement technique de profils
+              cadres et cadres supérieurs dans l'industrie, j'ai décidé
+              retourner à mes premiers amours et de reprendre une formation dans
+              le développement Web. <br></br>
+              <br></br>Avec une envie de devenir un{" "}
+              <span>développeur Fullstack confirmé</span>, je me suis
+              particulièrement intéressé par les technologies{" "}
+              <span>Javascript</span>. Je suis plus particulièrement spécialisé
+              sur le framework <span>ReactJS</span> en frontend et{" "}
+              <span>Express/NodeJS</span> pour le backend.<br></br>
+              <br></br>
+              Je suis aujourd'hui ouvert aux opportunités sur <span>
+                Lyon
+              </span>{" "}
+              et disponible pour vous accompagner dans vos développement de
+              projets en ReactJS.
             </p>
           </div>
           <div className="col-sm-12 col-md-6 infos">
@@ -60,42 +71,19 @@ const About = () => {
               <i>
                 <FontAwesomeIcon icon={faDesktop} size="1x" />{" "}
               </i>
-              Développement Web
+              Frontend
             </h4>
-            <p>
-              Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue
-              elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex
-              justo, faucibus ut mi in
-            </p>
-          </div>
-
-          <div className="col-sm-12 col-md-6 skills-content">
-            <h4>
-              {" "}
-              <i>
-                <FontAwesomeIcon icon={faMobileAlt} size="1x" />{" "}
-              </i>{" "}
-              Développement mobile
-            </h4>
-            <p>
-              Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue
-              elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex
-              justo, faucibus ut mi in
-            </p>
-          </div>
-
-          <div className="col-sm-12 col-md-6 skills-content">
-            <h4>
-              {" "}
-              <i>
-                <FontAwesomeIcon icon={faShoppingCart} size="1x" />{" "}
-              </i>
-              E-Commerce
-            </h4>
-            <p>
-              Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue
-              elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex
-              justo, faucibus ut mi in
+            <p className="about__frontend__paragraph">
+              Mon domaine de prédilection avec l'envie de m'améliorer jours
+              après jours. J'aimerais participer au développement d'application
+              complexes. <br></br>
+              <br></br>
+              <ul>
+                <li>React</li>
+                <li>Gatsby</li>
+                <li>Svelte</li>
+                <li>Vanilla Javascript</li>
+              </ul>
             </p>
           </div>
 
@@ -107,10 +95,57 @@ const About = () => {
               </i>{" "}
               Back-End
             </h4>
-            <p>
-              Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue
-              elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex
-              justo, faucibus ut mi in
+            <p className="about__backend__paragraph">
+              Assez sensible au développement côté serveur, j'ai voulu être
+              opérationnel côté backend afin de répondre précisément à mes
+              besoins du côté front. Les technologies que j'ai utilisées sont :
+              <br></br>
+              <br></br>
+              <ul>
+                <li>CRUD sous Express (framework NodeJS)</li>
+                <li>GraphQL avec Gatsby</li>
+                <li>Strapi (Headless CMS)</li>
+              </ul>
+            </p>
+          </div>
+
+          <div className="col-sm-12 col-md-6 skills-content">
+            <h4>
+              {" "}
+              <i>
+                <FontAwesomeIcon icon={faMobileAlt} size="1x" />{" "}
+              </i>{" "}
+              Développement mobile
+            </h4>
+            <p className="about__mobile__paragraph">
+              Ayant déjà une expérience significative en développement Android
+              dans une autre vie, j'ai naturellement envie de retourner sur les
+              environnements mobiles.<br></br>
+              <br></br>
+              <ul>
+                <li>Swift/iOS (en cours de formation)</li>
+              </ul>
+            </p>
+          </div>
+
+          <div className="col-sm-12 col-md-6 skills-content">
+            <h4>
+              {" "}
+              <i>
+                <FontAwesomeIcon icon={faCloud} size="1x" />{" "}
+              </i>
+              Déploiement
+            </h4>
+            <p className="about__hosting__paragraph">
+              Pour deployer mes applications, je me suis servi des plateformes
+              suivantes :<br></br>
+              <br></br>
+              <ul>
+                <li>Heroku</li>
+                <li>Netlify</li>
+                <li>WebHooks via GitHub</li>
+                <li>Cloudinary</li>
+              </ul>
             </p>
           </div>
         </div>

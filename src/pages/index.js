@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import Layout from "../components/Layout"
+import { Link } from "gatsby"
 
 const Home = () => (
   <Layout>
@@ -25,8 +26,14 @@ const Home = () => (
         </i>
       </div>
       <div className="go-to-btns-wrapper">
-        <div className="btn">Voir mon portefolio</div>
-        <div className="btn">Voir mon CV</div>
+        <Link to="/Projects" style={{ textDecoration: "none" }}>
+          <div className="btn">Voir mon portefolio</div>
+        </Link>
+        <Link to="/About" style={{ textDecoration: "none" }}>
+          <div className="btn">
+            <span>En savoir plus</span>
+          </div>
+        </Link>
       </div>
     </div>
   </Layout>

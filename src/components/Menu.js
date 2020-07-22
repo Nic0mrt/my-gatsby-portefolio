@@ -12,7 +12,7 @@ const Menu = () => {
       <div
         role="button"
         tabIndex={0}
-        className={`menu-icon ${show ? "active" : ""}`}
+        className={`menu-icon-button ${show ? "active" : ""}`}
         onClick={() => setShow(!show)}
       >
         <span className="first-bar"></span>
