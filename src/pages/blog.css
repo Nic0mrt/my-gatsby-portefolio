@@ -2,6 +2,9 @@
   flex: 1;
   padding: 60px 20px;
 }
+.blog-title span {
+  color: #0ba376;
+}
 
 .blog-feed {
   list-style-type: none;

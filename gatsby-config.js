@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: `https://nicolas-maret-portefolio.netlify.app/`,
   },
   plugins: [
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {

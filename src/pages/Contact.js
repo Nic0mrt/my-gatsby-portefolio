@@ -56,8 +56,8 @@ const Contact = () => {
   const showToast = (success = true) => {
     setToastIsOpen(true)
     if (success) {
-      setToastStatus("Succès")
-      setToastMessage("Message envoyé ! Je vous réponds au plus vite")
+      setToastStatus("Message envoyé avec succès")
+      setToastMessage("Je vous réponds au plus vite")
     } else {
       setToastStatus("Erreur")
       setToastMessage("Impossible d'envoyer le message")
@@ -74,37 +74,51 @@ const Contact = () => {
         <h3 className="contact-title">
           Contactez <span>moi</span> !
         </h3>
+        <p className="contact-paragraph">
+          {" "}
+          Un projet front end en <span>React</span> à me confier ou en back end{" "}
+          <span>Express</span> ? Un recrutement d'un développeur{" "}
+          <span>Javascript</span> ? N'hésitez pas à me joindre en me laissant
+          vos coordonnées, je vous recontacterai au plus vite !{" "}
+        </p>
+
         <form className="contact-form" method="POST" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Votre nom</label>
-            <input
-              required
-              name="name"
-              type="text"
-              className="form-control"
-              onChange={handleInputChange}
-            />
+            <label htmlFor="name">
+              Votre nom :
+              <input
+                required
+                name="name"
+                type="text"
+                className="form-control"
+                onChange={handleInputChange}
+              />
+            </label>
           </div>
           <div className="form-group">
-            <label htmlFor="email">Adresse Email</label>
-            <input
-              required
-              name="email"
-              type="email"
-              className="form-control"
-              aria-describedby="emailHelp"
-              onChange={handleInputChange}
-            />
+            <label htmlFor="email">
+              Adresse Email :
+              <input
+                required
+                name="email"
+                type="email"
+                className="form-control"
+                aria-describedby="emailHelp"
+                onChange={handleInputChange}
+              />
+            </label>
           </div>
           <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              required
-              name="message"
-              className="form-control"
-              rows="5"
-              onChange={handleInputChange}
-            ></textarea>
+            <label htmlFor="message">
+              Message
+              <textarea
+                required
+                name="message"
+                className="form-control"
+                rows="5"
+                onChange={handleInputChange}
+              ></textarea>
+            </label>
           </div>
           <button type="submit" className="submit-btn" disabled={isLoading}>
             {isLoading ? (

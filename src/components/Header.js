@@ -73,16 +73,16 @@ const Header = props => {
       </ul>
       <ul className="menu__social-medias">
         <li>
-          <i class="fab fa-facebook-f"></i>
+          <i className="fab fa-facebook-f"></i>
         </li>
         <li>
-          <i class="fab fa-instagram"></i>
+          <i className="fab fa-instagram"></i>
         </li>
         <li>
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </li>
         <li>
-          <i class="fab fa-linkedin-in"></i>
+          <i className="fab fa-linkedin-in"></i>
         </li>
       </ul>
 

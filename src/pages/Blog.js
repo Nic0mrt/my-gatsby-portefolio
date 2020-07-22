@@ -10,6 +10,10 @@ const Blog = ({ data }) => {
     <Layout>
       <SEO title="Blog" />
       <div className="blog-section">
+        <h3 className="blog-title">
+          Venez découvrir mon <span>blog</span>
+        </h3>
+
         <ul className="blog-feed">
           {data.allStrapiArticle.edges.map(article => {
             return (

@@ -29,7 +29,11 @@ const Article = ({ data }) => {
           publié le{" "}
           <Moment format="MMMM Do YYYY">{article.published_at}</Moment>
         </p>
-        <img className="article__image" src={article.image.publicURL}></img>
+        <img
+          className="article__image"
+          src={article.image.publicURL}
+          alt=""
+        ></img>
         <div className="article__content">
           <ReactMarkdown source={article.content} />
         </div>
