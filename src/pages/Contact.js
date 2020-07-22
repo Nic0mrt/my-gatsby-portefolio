@@ -24,10 +24,13 @@ const Contact = () => {
     formData.append("email", email)
     formData.append("message", message)
 
-    const res = await fetch(
-      "https://formbucket.com/f/buk_yzdVeYupoCavGk0I0J26pcQT",
-      { method: "POST", body: formData }
-    )
+    const res = await fetch("https://formspree.io/xqkywelk", {
+      headers: {
+        Accept: "application/json",
+      },
+      method: "POST",
+      body: formData,
+    })
 
     if (res.status === 200) {
       form.reset()
@@ -123,7 +126,7 @@ const Contact = () => {
           <button type="submit" className="submit-btn" disabled={isLoading}>
             {isLoading ? (
               <div
-                class="spinner-border spinner-border-sm text-light"
+                className="spinner-border spinner-border-sm text-light"
                 role="status"
               ></div>
             ) : (
