@@ -4,6 +4,8 @@ import "./article.css"
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import Layout from "../components/Layout"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+deckDeckGoHighlightElement()
 
 export const query = graphql`
   query ArticleQuery($id: String) {
@@ -27,7 +29,9 @@ const Article = ({ data }) => {
         <h3>{article.title}</h3>
         <p className="article__date">
           publié le{" "}
-          <Moment format="MMMM Do YYYY">{article.published_at}</Moment>
+          <Moment locale="fr" format="Do MMMM YYYY">
+            {article.published_at}
+          </Moment>
         </p>
         <img
           className="article__image"
