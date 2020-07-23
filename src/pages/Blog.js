@@ -14,15 +14,11 @@ const Blog = ({ data }) => {
           Venez découvrir mon <span>blog</span>
         </h3>
 
-        <ul className="blog-feed">
+        <div className="blog-feed">
           {data.allStrapiArticle.edges.map(article => {
-            return (
-              <li key={article.node.strapiId}>
-                <PostCard article={article.node} />
-              </li>
-            )
+            return <PostCard article={article.node} />
           })}
-        </ul>
+        </div>
       </div>
     </Layout>
   )
@@ -37,6 +33,24 @@ export const blogQuery = graphql`
           title
           image {
             publicURL
+            childImageSharp {
+              fixed(width: 600, height: 300) {
+                base64
+                tracedSVG
+                aspectRatio
+                srcWebp
+                srcSetWebp
+                originalName
+              }
+              fluid(maxWidth: 400) {
+                base64
+                tracedSVG
+                srcWebp
+                srcSetWebp
+                originalImg
+                originalName
+              }
+            }
           }
           slug
           published_at

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "./postcard.css"
+import Img from "gatsby-image"
 import Moment from "react-moment"
 
 const PostCard = ({ article }) => {
@@ -11,12 +12,11 @@ const PostCard = ({ article }) => {
 
   return (
     <div className="postcard">
-      <Link to={`/article/${article.slug}`}>
-        <div className="postcard__image">
-          <img src={imageURL} alt={article.slug} />
-        </div>
-      </Link>
-
+      <div className="postcard__image">
+        <Link to={`/article/${article.slug}`}>
+          <Img fluid={article.image.childImageSharp.fixed} alt={article.slug} />
+        </Link>
+      </div>
       <div className="postcard__content">
         <Link
           to={`/article/${article.slug}`}
@@ -26,7 +26,9 @@ const PostCard = ({ article }) => {
         </Link>
         <p className="postcard__content__pusblished-at">
           publié le{" "}
-          <Moment format="MMMM Do YYYY">{article.published_at}</Moment>
+          <Moment locale="fr" format="Do MMMM YYYY">
+            {article.published_at}
+          </Moment>
         </p>
       </div>
     </div>

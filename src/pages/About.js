@@ -25,20 +25,18 @@ const About = () => {
               Diplômé d'un <span>DUT informatique</span> et d'un Master en
               management et après 6 ans dans le recrutement technique de profils
               cadres et cadres supérieurs dans l'industrie, j'ai décidé
-              retourner à mes premiers amours et de reprendre une formation dans
+              retourner à mes premiers amours et de reprendre une formation en
               le développement Web. <br></br>
-              <br></br>Avec une envie de devenir un{" "}
+              <br></br>Avec l'objectif de devenir{" "}
               <span>développeur Fullstack confirmé</span>, je me suis
-              particulièrement intéressé par les technologies{" "}
-              <span>Javascript</span>. Je suis plus particulièrement spécialisé
-              sur le framework <span>ReactJS</span> en frontend et{" "}
-              <span>Express/NodeJS</span> pour le backend.<br></br>
+              particulièrement intéressé au <span>Javascript</span>. Je suis
+              plus particulièrement spécialisé sur le framework{" "}
+              <span>React</span> en frontend et <span>Express/NodeJS</span> pour
+              le backend.<br></br>
               <br></br>
-              Je suis aujourd'hui ouvert aux opportunités sur <span>
-                Lyon
-              </span>{" "}
-              et disponible pour vous accompagner dans vos développement de
-              projets en ReactJS.
+              Aujourd'hui ouvert aux opportunités sur <span>Lyon</span> et
+              disponible pour vous accompagner dans vos développement de projets
+              en ReactJS.
             </p>
           </div>
           <div className="col-sm-12 col-md-6 infos">

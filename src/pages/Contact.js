@@ -57,7 +57,7 @@ const Contact = () => {
       case "email":
         setEmail(e.target.value)
         break
-      case "phoneNumer":
+      case "phoneNumber":
         setPhoneNumber(e.target.value)
         break
       default:
