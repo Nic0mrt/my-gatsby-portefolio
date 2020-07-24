@@ -4,8 +4,6 @@ import "./article.css"
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import Layout from "../components/Layout"
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
-deckDeckGoHighlightElement()
 
 export const query = graphql`
   query ArticleQuery($id: String) {

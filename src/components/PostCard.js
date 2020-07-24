@@ -6,9 +6,6 @@ import Moment from "react-moment"
 
 const PostCard = ({ article }) => {
   const title = article.title ? article.title : "titre non chargé"
-  const imageURL = article.image.publicURL
-    ? article.image.publicURL
-    : "https://picsum.photos/300/200"
 
   return (
     <div className="postcard">
