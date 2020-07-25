@@ -1,0 +1,45 @@
+.projects-section {
+  flex: 1;
+  padding: 60px 20px;
+}
+.projects-section span {
+  color: #0ba376;
+  font-weight: bold;
+}
+
+.projects-section img {
+  width: 100%;
+  margin: 0;
+}
+
+.project-card {
+  margin-top: 40px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.22);
+}
+
+.project-card__description {
+  background-color: #eee;
+  padding: 10px;
+}
+
+.project-card__skills-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.project-card__skills-list li {
+  background-color: #0ba376;
+  color: white;
+  padding: 0 5px;
+  margin: 5px 5px;
+}
+
+@media screen and (min-width: 640px) {
+  .projects-section {
+    padding: 30px 150px;
+  }
+}

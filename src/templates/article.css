@@ -1,5 +1,4 @@
 .article-section {
-  flex: 1;
   padding: 60px 20px;
 }
 
@@ -16,11 +15,6 @@
 .article__content img {
   width: 100%;
   display: block;
-  margin: auto;
-}
-
-.article__date {
-  font-size: 0.7rem;
 }
 
 .article__image {
@@ -66,13 +60,14 @@ blockquote p {
   font-style: italic;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 640px) {
   .article-section {
     padding: 30px 20%;
   }
 
-  .article__image {
-    width: 100%;
-    object-fit: cover;
+  .article__content img {
+    width: 80%;
+    display: block;
+    margin: auto;
   }
 }
