@@ -7,7 +7,7 @@ module.exports = {
     title: `Nicolas MARET, Développeur Web React sur Lyon`,
     description: `Je suis Nicolas MARET Développeur Web Fullstack React et NodeJS basé à Lyon`,
     author: `@nicolasmaret`,
-    siteUrl: `https://nicolas-maret-portefolio.netlify.app/`,
+    siteUrl: `https://nicolasmaret.fr/`,
   },
   plugins: [
     `gatsby-plugin-offline`,
@@ -18,6 +18,10 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+      options: {
+        path: `${__dirname}/src/markdown-pages`,
+        name: `markdown-pages`,
       },
     },
     {
@@ -46,6 +50,7 @@ module.exports = {
         icon: `src/images/laptop-code-solid.svg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-transformer-remark`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

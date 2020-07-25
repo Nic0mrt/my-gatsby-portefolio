@@ -38,6 +38,12 @@ pre {
   margin: 30px 0;
 }
 
+code {
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
 .gatsby-highlight-code-line {
   background-color: #feb;
   display: block;

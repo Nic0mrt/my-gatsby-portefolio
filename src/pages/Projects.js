@@ -5,6 +5,9 @@ import "./projects.css"
 import territoires from "../images/territoires-presentation.png"
 import portfolio from "../images/portfolio-presentation.png"
 import { Container, Row, Col } from "reactstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { Link } from "gatsby"
 
 const Projects = () => {
   return (
@@ -19,46 +22,70 @@ const Projects = () => {
           <Row>
             <Col sm="12" lg="6">
               {" "}
-              <div className="project-card">
-                <img src={territoires} alt=""></img>
-                <div className="project-card__description">
-                  <h4>Gestion de territoires</h4>
-                  <p>
-                    Application de gestion d'attribution de territoires
-                    géographiques pour une association
-                  </p>
+              <Link
+                to="/project/gestion-des-terrritoires"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="project-card">
+                  <img src={territoires} alt=""></img>
+                  <div className="project-card__description">
+                    <h4>Gestion de territoires</h4>
+                    <p>
+                      Application de gestion d'attribution de territoires
+                      géographiques pour une association
+                    </p>
 
-                  <ul className="project-card__skills-list">
-                    {" "}
-                    <li>Javascript</li>
-                    <li>Svelte</li>
-                    <li>Mapbox</li>
-                    <li>Express</li>
-                    <li>Boostrap</li>
-                  </ul>
+                    <ul className="project-card__skills-list">
+                      {" "}
+                      <li>Javascript</li>
+                      <li>Svelte</li>
+                      <li>Mapbox</li>
+                      <li>Express</li>
+                      <li>Boostrap</li>
+                    </ul>
+                  </div>
+                  <div className="project-card__hover-about">
+                    <FontAwesomeIcon
+                      icon={faSearch}
+                      size="2x"
+                    ></FontAwesomeIcon>
+                    <p>En savoir plus</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </Col>
             <Col sm="12" lg="6">
               {" "}
-              <div className="project-card">
-                <img src={portfolio} alt=""></img>
-                <div className="project-card__description">
-                  <h4>Nicolasmaret.fr</h4>
-                  <p>
-                    Site portfolio entièrement responsive avec un générateur de
-                    sites statiques
-                  </p>
-                  <ul className="project-card__skills-list">
-                    {" "}
-                    <li>Javascript</li>
-                    <li>React</li>
-                    <li>Gatsby</li>
-                    <li>Strapi</li>
-                    <li>Boostrap</li>
-                  </ul>
+              <Link
+                to="/project/gestion-des-terrritoires"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="project-card">
+                  <img src={portfolio} alt=""></img>
+                  <div className="project-card__description">
+                    <h4>Nicolasmaret.fr</h4>
+                    <p>
+                      Site portfolio entièrement responsive avec un générateur
+                      de sites statiques
+                    </p>
+                    <ul className="project-card__skills-list">
+                      {" "}
+                      <li>Javascript</li>
+                      <li>React</li>
+                      <li>Gatsby</li>
+                      <li>Strapi</li>
+                      <li>Boostrap</li>
+                    </ul>
+                    <div className="project-card__hover-about">
+                      <FontAwesomeIcon
+                        icon={faSearch}
+                        size="2x"
+                      ></FontAwesomeIcon>
+                      <p>En savoir plus</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </Col>
           </Row>
         </Container>

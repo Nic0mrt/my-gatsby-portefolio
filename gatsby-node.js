@@ -11,6 +11,18 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              frontmatter {
+                slug
+              }
+            }
+          }
+        }
       }
     `
   )
@@ -28,6 +40,18 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         id: article.node.strapiId,
         slug: article.node.slug,
+      },
+    })
+  })
+
+  // Create Projects pages
+  const projects = result.data.allMarkdownRemark.edges
+  projects.forEach(project => {
+    createPage({
+      path: `/project/${project.node.frontmatter.slug}`,
+      component: require.resolve("./src/templates/projectTemplate.js"),
+      context: {
+        slug: project.node.frontmatter.slug,
       },
     })
   })
