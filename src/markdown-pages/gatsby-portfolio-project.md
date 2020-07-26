@@ -2,6 +2,8 @@
 slug: "mon-portefolio-en-gatsby-et-react"
 date: "2020-07-28"
 title: "Mon projet #2"
+featuredImage: ../images/projects/portfolio-presentation.png
+alt: "mon site gatsby et react"
 ---
 
 #### Présentation de mon portfolio développé en Gatsby et React

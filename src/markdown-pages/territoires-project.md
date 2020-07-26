@@ -2,6 +2,8 @@
 slug: "gestion-des-terrritoires-svelte-mapbox"
 date: "2020-07-25"
 title: "Mon projet #1"
+featuredImage: ../images/projects/territoires-presentation.png
+alt: "gestion de territoires avec Svelte et Mapbox"
 ---
 
 #### Présentation de mon application de gestion de territoires avec MapBox et Svelte

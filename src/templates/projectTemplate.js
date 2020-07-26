@@ -3,12 +3,16 @@ import { graphql } from "gatsby"
 import Moment from "react-moment"
 import Layout from "../components/Layout"
 import "./projectTemplate.css"
+import Img from "gatsby-image"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+  const featuredImage = frontmatter.featuredImage.childImageSharp.fluid
+  const alt = frontmatter.alt
+
   return (
     <Layout>
       <div className="project-section">
@@ -19,6 +23,8 @@ export default function Template({
             {frontmatter.date}
           </Moment>
         </div>
+
+        <Img fluid={featuredImage} alt={alt}></Img>
 
         <div
           className="project-content"
@@ -37,6 +43,13 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         slug
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
