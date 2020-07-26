@@ -2,6 +2,10 @@
   flex: 1;
   padding: 60px 20px;
 }
+.blog-title {
+  margin-bottom: 40px;
+}
+
 .blog-title span {
   color: #0ba376;
 }

@@ -34,21 +34,8 @@ export const blogQuery = graphql`
           image {
             publicURL
             childImageSharp {
-              fixed(width: 600, height: 300) {
-                base64
-                tracedSVG
-                aspectRatio
-                srcWebp
-                srcSetWebp
-                originalName
-              }
-              fluid(maxWidth: 400) {
-                base64
-                tracedSVG
-                srcWebp
-                srcSetWebp
-                originalImg
-                originalName
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

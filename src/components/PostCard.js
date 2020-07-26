@@ -11,7 +11,7 @@ const PostCard = ({ article }) => {
     <div className="postcard">
       <div className="postcard__image">
         <Link to={`/article/${article.slug}`}>
-          <Img fluid={article.image.childImageSharp.fixed} alt={article.slug} />
+          <Img fluid={article.image.childImageSharp.fluid} alt={article.slug} />
         </Link>
       </div>
       <div className="postcard__content">
