@@ -23,7 +23,7 @@ const Projects = () => {
             <Col sm="12" lg="6">
               {" "}
               <Link
-                to="/project/gestion-des-terrritoires"
+                to="/project/gestion-des-terrritoires-svelte-mapbox"
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div className="project-card">
@@ -49,7 +49,7 @@ const Projects = () => {
                       icon={faSearch}
                       size="2x"
                     ></FontAwesomeIcon>
-                    <p>En savoir plus</p>
+                    <p style={{ fontWeight: "bold" }}>En savoir plus</p>
                   </div>
                 </div>
               </Link>
@@ -57,7 +57,7 @@ const Projects = () => {
             <Col sm="12" lg="6">
               {" "}
               <Link
-                to="/project/gestion-des-terrritoires"
+                to="/project/mon-portefolio-en-gatsby-et-react"
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div className="project-card">
