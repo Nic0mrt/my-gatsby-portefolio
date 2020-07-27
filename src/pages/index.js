@@ -5,11 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
+import bg from "../images/home-bg.svg"
 
 const Home = () => (
   <Layout>
     <SEO title="Home" />
     <div className="home">
+      <img src={bg} className="home__image"></img>
       <h3>
         Nicolas <span>MARET</span>
       </h3>

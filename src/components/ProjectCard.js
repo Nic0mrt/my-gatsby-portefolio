@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
     <Col sm="12" lg="6">
       {" "}
       <Link
-        to={`project/${project.frontmatter.slug}`}
+        to={`/project/${project.frontmatter.slug}`}
         style={{ textDecoration: "none", color: "black" }}
       >
         <div className="project-card">
@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
           ></Img>
 
           <div className="project-card__description">
-            <h4>{project.title}</h4>
+            <h4>{project.frontmatter.title}</h4>
             <p>{project.frontmatter.presentation}</p>
 
             <ul className="project-card__skills-list">

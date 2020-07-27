@@ -19,6 +19,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/markdown-pages`,
         name: `markdown-pages`,
@@ -47,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Portfolio Nicolas MARET`,
+        short_name: `Nicolas MARET`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

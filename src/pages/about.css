@@ -19,6 +19,10 @@
   color: #0ba376;
   font-weight: bold;
 }
+.infos {
+  display: flex;
+  flex-direction: column;
+}
 
 .infos div {
   margin-bottom: 10px;

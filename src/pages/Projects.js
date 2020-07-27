@@ -2,10 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import "./projects.css"
-
 import { Container, Row } from "reactstrap"
-
-import { Link } from "gatsby"
 import ProjectCard from "../components/ProjectCard"
 
 const Projects = ({ data }) => {
