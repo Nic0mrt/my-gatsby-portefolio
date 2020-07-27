@@ -11,11 +11,15 @@ const Home = () => (
   <Layout>
     <SEO title="Home" />
     <div className="home">
-      <img src={bg} className="home__image"></img>
+      <img
+        src={bg}
+        alt="développeur web react/javascript sur Lyon"
+        className="home__image"
+      ></img>
       <h3>
         Nicolas <span>MARET</span>
       </h3>
-      <h2> Développeur Web sur Lyon, spécialiste ReactJS</h2>
+      <h2> Développeur Web sur Lyon</h2>
       <div className="logos">
         <i className="react">
           <FontAwesomeIcon icon={faReact} size="1x" />{" "}

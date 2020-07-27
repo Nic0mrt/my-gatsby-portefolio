@@ -9,6 +9,7 @@ import {
   faServer,
   faCloud,
 } from "@fortawesome/free-solid-svg-icons"
+import image from "../images/home-bg.svg"
 
 const About = () => {
   return (
@@ -27,16 +28,14 @@ const About = () => {
               cadres et cadres supérieurs dans l'industrie, j'ai décidé
               retourner à mes premiers amours et de reprendre une formation en
               le développement Web. <br></br>
-              <br></br>Avec l'objectif de devenir{" "}
-              <span>développeur Fullstack confirmé</span>, je me suis
-              particulièrement intéressé au <span>Javascript</span>. Je suis
-              plus particulièrement spécialisé sur le framework{" "}
-              <span>React</span> en frontend et <span>Express/NodeJS</span> pour
-              le backend.<br></br>
+              <br></br>
+              <span>Développeur Fullstack Javascript</span>. Je suis plus
+              particulièrement spécialisé sur les frameworks<span>React</span>{" "}
+              en frontend et <span>Express/NodeJS</span> en backend.<br></br>
               <br></br>
               Aujourd'hui ouvert aux opportunités sur <span>Lyon</span> et
               disponible pour vous accompagner dans vos développement de projets
-              en ReactJS.
+              web.
             </p>
           </div>
           <div className="col-sm-12 col-md-6 infos">

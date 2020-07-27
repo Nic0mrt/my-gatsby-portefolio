@@ -24,6 +24,11 @@ const Article = ({ data }) => {
   return (
     <Layout>
       <div className="article-section">
+        <img
+          className="article__image"
+          src={article.image.publicURL}
+          alt=""
+        ></img>
         <h3>{article.title}</h3>
         <p className="article__date">
           publié le{" "}
@@ -31,11 +36,7 @@ const Article = ({ data }) => {
             {article.published_at}
           </Moment>
         </p>
-        <img
-          className="article__image"
-          src={article.image.publicURL}
-          alt=""
-        ></img>
+
         <div className="article__content">
           <ReactMarkdown source={article.content} />
         </div>

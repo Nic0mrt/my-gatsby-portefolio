@@ -12,7 +12,7 @@
 
 .about-section h3 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .about-section span {
@@ -29,6 +29,10 @@
 }
 .infos span {
   margin-right: 10px;
+}
+.infos img {
+  width: 100%;
+  flex-grow: 1;
 }
 
 .skills-content {
