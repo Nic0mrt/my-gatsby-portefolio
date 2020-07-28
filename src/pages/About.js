@@ -9,7 +9,6 @@ import {
   faServer,
   faCloud,
 } from "@fortawesome/free-solid-svg-icons"
-import image from "../images/home-bg.svg"
 
 const About = () => {
   return (
@@ -30,7 +29,7 @@ const About = () => {
               le développement Web. <br></br>
               <br></br>
               <span>Développeur Fullstack Javascript</span>. Je suis plus
-              particulièrement spécialisé sur les frameworks<span>React</span>{" "}
+              particulièrement spécialisé sur les frameworks <span>React</span>{" "}
               en frontend et <span>Express/NodeJS</span> en backend.<br></br>
               <br></br>
               Aujourd'hui ouvert aux opportunités sur <span>Lyon</span> et

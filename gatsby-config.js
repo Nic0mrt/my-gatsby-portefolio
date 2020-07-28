@@ -10,9 +10,11 @@ module.exports = {
     siteUrl: `https://nicolasmaret.fr/`,
   },
   plugins: [
+    "gatsby-plugin-robots-txt",
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,6 +48,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Portfolio Nicolas MARET`,
@@ -57,7 +72,6 @@ module.exports = {
         icon: `src/images/laptop-code-solid.svg`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-remark`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

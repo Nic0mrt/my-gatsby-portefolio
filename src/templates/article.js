@@ -4,6 +4,7 @@ import "./article.css"
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import Layout from "../components/Layout"
+import Img from "gatsby-image"
 
 export const query = graphql`
   query ArticleQuery($id: String) {
@@ -14,6 +15,11 @@ export const query = graphql`
       published_at
       image {
         publicURL
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   }
@@ -24,11 +30,7 @@ const Article = ({ data }) => {
   return (
     <Layout>
       <div className="article-section">
-        <img
-          className="article__image"
-          src={article.image.publicURL}
-          alt=""
-        ></img>
+        <Img fluid={article.image.childImageSharp.fluid} alt=""></Img>
         <h3>{article.title}</h3>
         <p className="article__date">
           publié le{" "}

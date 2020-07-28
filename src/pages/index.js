@@ -16,30 +16,32 @@ const Home = () => (
         alt="développeur web react/javascript sur Lyon"
         className="home__image"
       ></img>
-      <h3>
-        Nicolas <span>MARET</span>
-      </h3>
-      <h2> Développeur Web sur Lyon</h2>
-      <div className="logos">
-        <i className="react">
-          <FontAwesomeIcon icon={faReact} size="1x" />{" "}
-        </i>
-        <i className="js">
-          <FontAwesomeIcon icon={faJs} size="1x" />{" "}
-        </i>
-        <i className="node-js">
-          <FontAwesomeIcon icon={faNodeJs} size="1x" />{" "}
-        </i>
-      </div>
-      <div className="go-to-btns-wrapper">
-        <Link to="/Projects" style={{ textDecoration: "none" }}>
-          <div className="btn">Voir mon portefolio</div>
-        </Link>
-        <Link to="/About" style={{ textDecoration: "none" }}>
-          <div className="btn">
-            <span>En savoir plus</span>
-          </div>
-        </Link>
+      <div className="home-content">
+        <h3>
+          Nicolas <span>MARET</span>
+        </h3>
+        <h2> Développeur Web sur Lyon</h2>
+        <div className="logos">
+          <i className="react">
+            <FontAwesomeIcon icon={faReact} size="1x" />{" "}
+          </i>
+          <i className="js">
+            <FontAwesomeIcon icon={faJs} size="1x" />{" "}
+          </i>
+          <i className="node-js">
+            <FontAwesomeIcon icon={faNodeJs} size="1x" />{" "}
+          </i>
+        </div>
+        <div className="go-to-btns-wrapper">
+          <Link to="/Projects" style={{ textDecoration: "none" }}>
+            <div className="btn">Voir mon portefolio</div>
+          </Link>
+          <Link to="/About" style={{ textDecoration: "none" }}>
+            <div className="btn">
+              <span>En savoir plus</span>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   </Layout>
