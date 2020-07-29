@@ -1,9 +1,9 @@
 ---
 slug: "gestion-des-terrritoires-svelte-mapbox"
 date: "2020-07-25"
-title: "Gestion de territoires Fullstack"
+title: "Gestion de territoires"
 presentation: "Application de gestion d'attribution de territoires
-  géographiques pour une association"
+  géographiques avec gestion serveur"
 featuredImage: ../images/projects/territoires-presentation.png
 alt: "gestion de territoires avec Svelte et Mapbox"
 skills: [Javascript, Svelte, Mapbox, Express, Bootstrap]

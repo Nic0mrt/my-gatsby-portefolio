@@ -36,6 +36,22 @@
   flex-grow: 1;
 }
 
+.about__social-bar {
+  display: flex;
+  flex-direction: column;
+}
+.about__social-bar a {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  color: #0ba376;
+}
+
+.about__social-bar a p {
+  margin: 0 20px;
+  color: black;
+}
+
 .skills-content {
   margin: 10px 0;
 }

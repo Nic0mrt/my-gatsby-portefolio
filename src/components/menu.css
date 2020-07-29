@@ -1,6 +1,9 @@
 .menu-wrapper {
   width: 100%;
 }
+.social-bar {
+  display: none;
+}
 
 .menu-icon-button {
   position: fixed;
@@ -73,7 +76,7 @@
   width: 330px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 992px) {
   .menu-icon-button {
     display: none;
   }
@@ -85,5 +88,23 @@
   }
   .menu.open {
     width: 100%;
+  }
+  .social-bar {
+    height: 30px;
+    background-color: #474747;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 150px;
+  }
+
+  .social-bar a {
+    margin: 0 10px;
+    color: white;
+  }
+
+  .social-bar svg:hover {
+    color: #0ba376;
   }
 }

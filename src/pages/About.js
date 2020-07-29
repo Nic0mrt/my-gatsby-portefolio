@@ -4,11 +4,18 @@ import SEO from "../components/seo"
 import "./about.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
+  faInstagram,
+  faGithub,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons"
+import {
   faMobileAlt,
   faDesktop,
   faServer,
   faCloud,
 } from "@fortawesome/free-solid-svg-icons"
+
+import { Link } from "gatsby"
 
 const About = () => {
   return (
@@ -52,6 +59,23 @@ const About = () => {
             </div>
             <div>
               <span>Téléphone </span>+33 (0)7 71 67 04 64
+            </div>
+            <div className="about__social-bar">
+              {" "}
+              <Link
+                to="https://github.com/Spartack"
+                style={{ textDecoration: "none" }}
+              >
+                <FontAwesomeIcon icon={faGithub} size="3x" />{" "}
+                <p>Visiter mon profil GitHub</p>
+              </Link>
+              <Link
+                to="https://www.linkedin.com/in/nicolas-maret-linkedin"
+                style={{ textDecoration: "none" }}
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} size="3x" />{" "}
+                <p>Visiter mon profil Linkedin</p>
+              </Link>
             </div>
           </div>
         </div>

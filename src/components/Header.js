@@ -1,14 +1,19 @@
 import React from "react"
 import "./header.css"
 import avatar from "../images/avatar.jpg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faInstagram,
+  faGithub,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons"
+
 import { Link } from "gatsby"
 
 const Header = props => {
   return (
     <header className="menu__header">
-      <Link to={"/"} style={{ textDecoration: "none" }}>
-        <img alt="Nicolas développeur" src={avatar}></img>
-      </Link>
+      <img alt="Nicolas développeur" src={avatar}></img>
 
       <Link to={"/"} style={{ textDecoration: "none" }}>
         <div className="menu__title">
@@ -66,16 +71,28 @@ const Header = props => {
       </ul>
       <ul className="menu__social-medias">
         <li>
-          <i className="fab fa-facebook-f"></i>
+          <Link
+            to="https://github.com/Spartack"
+            style={{ textDecoration: "none" }}
+          >
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </Link>
         </li>
         <li>
-          <i className="fab fa-instagram"></i>
+          <Link
+            to="https://www.linkedin.com/in/nicolas-maret-linkedin"
+            style={{ textDecoration: "none" }}
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+          </Link>
         </li>
         <li>
-          <i className="fab fa-github"></i>
-        </li>
-        <li>
-          <i className="fab fa-linkedin-in"></i>
+          <Link
+            to="https://www.instagram.com/nic0_mrt/"
+            style={{ textDecoration: "none" }}
+          >
+            <FontAwesomeIcon icon={faInstagram} size="2x" />{" "}
+          </Link>
         </li>
       </ul>
 

@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import "./contact.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
-import { Toast, ToastBody, ToastHeader } from "reactstrap"
 
 const Contact = () => {
   const [name, setName] = useState("")
@@ -15,9 +14,6 @@ const Contact = () => {
 
   const [sendStatus, setSendStatus] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const [toastStatus, setToastStatus] = useState("")
-  const [toastMessage, setToastMessage] = useState("")
-  const [toastIsOpen, setToastIsOpen] = useState(false)
 
   const handleSubmit = async e => {
     e.preventDefault()
