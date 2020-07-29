@@ -106,6 +106,7 @@
 }
 
 .menu__download-btn {
+  display: none;
   border: solid 2px #fff;
   padding: 15px;
   font-weight: 600;
@@ -126,7 +127,7 @@
   font-weight: 600;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 640px) {
   .menu__header {
     width: 100%;
     padding: 0 30px;

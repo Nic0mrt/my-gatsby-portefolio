@@ -7,6 +7,7 @@ presentation: "Site portfolio entièrement responsive avec un générateur
 featuredImage: ../images/projects/portfolio-v1-presentation.png
 alt: "mon site gatsby et react"
 skills: [javascript, React, Gatsby, Strapi, Bootstrap]
+github: "https://github.com/Spartack/my-gatsby-portefolio"
 ---
 
 <br><br>
@@ -54,4 +55,5 @@ skills: [javascript, React, Gatsby, Strapi, Bootstrap]
 <br>
 
 - Lighthouse
-  ![Resultats de Lighthouse](../images/projects/portfolio/lighthouse-results.png)
+
+![Resultats de Lighthouse](../images/projects/portfolio/lighthouse-results.png)

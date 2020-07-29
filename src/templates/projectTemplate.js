@@ -17,13 +17,11 @@ export default function Template({
     <Layout>
       <div className="project-section">
         <h3>{frontmatter.title}</h3>
-
         <div>
           <Moment locale="fr" format="Do MMMM YYYY">
             {frontmatter.date}
           </Moment>
         </div>
-
         <Img fluid={featuredImage} alt={alt}></Img>
 
         <div

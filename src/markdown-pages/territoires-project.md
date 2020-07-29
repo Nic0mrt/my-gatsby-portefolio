@@ -7,6 +7,7 @@ presentation: "Application de gestion d'attribution de territoires
 featuredImage: ../images/projects/territoires-presentation.png
 alt: "gestion de territoires avec Svelte et Mapbox"
 skills: [Javascript, Svelte, Mapbox, Express, Bootstrap]
+github: https://github.com/Spartack/Territories
 ---
 
 <br><br>
@@ -53,21 +54,23 @@ skills: [Javascript, Svelte, Mapbox, Express, Bootstrap]
 <br>
 
 - Vue d'ensemble du territoire avec Mapbox et les polygones dessinés
-  ![vue d'ensemble du territoire](../images/projects/territoires/vue-territoires.png)
+
+![vue d'ensemble du territoire](../images/projects/territoires/vue-territoires.png)
 
 <br>
 
 - Accueil d'un utilisateur avec ses territoires alloués
 
-  ![accueil utilisateur](../images/projects/territoires/vue-accueil-user.png)
+![accueil utilisateur](../images/projects/territoires/vue-accueil-user.png)
 
 <br>
 
 - Vue détaillée d'un territoire en tant qu'admin avec modifications possibles
 
-  ![vue en détail d'un territoire](../images/projects/territoires/vue-detail-territoire.png)
+![vue en détail d'un territoire](../images/projects/territoires/vue-detail-territoire.png)
 
 <br>
 
 - Gestion des utilisateurs en tant qu'admin
-  ![vue en détail d'un territoire](../images/projects/territoires/vue-users.png)
+
+![vue en détail d'un territoire](../images/projects/territoires/vue-users.png)
