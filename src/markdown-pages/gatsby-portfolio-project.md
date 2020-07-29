@@ -4,7 +4,7 @@ date: "2020-07-28"
 title: "Mon portflio en Gatsby et React"
 presentation: "Site portfolio entièrement responsive avec un générateur
   de sites statiques"
-featuredImage: ../images/projects/portfolio-presentation.png
+featuredImage: ../images/projects/portfolio-v1-presentation.png
 alt: "mon site gatsby et react"
 skills: [javascript, React, Gatsby, Strapi, Bootstrap]
 ---
@@ -36,9 +36,7 @@ skills: [javascript, React, Gatsby, Strapi, Bootstrap]
   - Possibilité d'ajouter des projets au fur et à mesure
   - Synchronisation automatique entre GitHub et Netlify grace aux Webhooks
 
-<br>
-
-- Visiteur
+* Visiteur
 
   - Connaissance de mon parcours et de mes compétences
   - Vue en détail de mes projets réalisés

@@ -49,6 +49,11 @@
   width: 16px;
 }
 
+.btn-status {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 640px) {
   .contact-section {
     padding: 30px 150px;

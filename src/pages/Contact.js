@@ -10,8 +10,10 @@ const Contact = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
+  const [societe, setSociete] = useState("")
   const [message, setMessage] = useState("")
 
+  const [sendStatus, setSendStatus] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [toastStatus, setToastStatus] = useState("")
   const [toastMessage, setToastMessage] = useState("")
@@ -25,6 +27,7 @@ const Contact = () => {
     formData.append("name", name)
     formData.append("email", email)
     formData.append("phoneNumber", phoneNumber)
+    formData.append("societe", societe)
     formData.append("message", message)
     try {
       const res = await fetch("https://formspree.io/xqkywelk", {
@@ -37,13 +40,13 @@ const Contact = () => {
 
       if (res.status === 200) {
         form.reset()
-        showToast()
+        showStatus()
       } else {
-        showToast(false)
+        showStatus(false)
       }
       setIsLoading(false)
     } catch (error) {
-      showToast(false)
+      showStatus(false)
       setIsLoading(false)
     }
   }
@@ -60,23 +63,23 @@ const Contact = () => {
       case "phoneNumber":
         setPhoneNumber(e.target.value)
         break
+      case "societe":
+        setSociete(e.target.value)
+        break
       default:
         setMessage(e.target.value)
         break
     }
   }
 
-  const showToast = (success = true) => {
-    setToastIsOpen(true)
+  const showStatus = (success = true) => {
     if (success) {
-      setToastStatus("Message envoyé avec succès")
-      setToastMessage("Je vous réponds au plus vite")
+      setSendStatus("Message envoyé")
     } else {
-      setToastStatus("Erreur")
-      setToastMessage("Impossible d'envoyer le message")
+      setSendStatus("Impossible d'envoyer le message")
     }
     setTimeout(() => {
-      setToastIsOpen(false)
+      setSendStatus("")
     }, 5000)
   }
 
@@ -135,6 +138,18 @@ const Contact = () => {
             </label>
           </div>
           <div className="form-group">
+            <label htmlFor="societe">
+              Société (facultatif):
+              <input
+                name="societe"
+                type="text"
+                className="form-control"
+                aria-describedby="Société"
+                onChange={handleInputChange}
+              />
+            </label>
+          </div>
+          <div className="form-group">
             <label htmlFor="message">
               Message
               <textarea
@@ -146,37 +161,24 @@ const Contact = () => {
               ></textarea>
             </label>
           </div>
-          <button type="submit" className="submit-btn" disabled={isLoading}>
-            {isLoading ? (
-              <div
-                className="spinner-border spinner-border-sm text-light"
-                role="status"
-              ></div>
-            ) : (
-              "Envoyer"
-            )}
-          </button>
+          <div className="btn-status">
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? (
+                <div
+                  className="spinner-border spinner-border-sm text-light"
+                  role="status"
+                ></div>
+              ) : (
+                "Envoyer"
+              )}
+            </button>
+            <span>{sendStatus ? sendStatus : null}</span>
+          </div>
           <p className="phone-contact">
             Par téléphone : <FontAwesomeIcon icon={faPhoneAlt} size="1x" /> 07
             71 67 04 64
           </p>
         </form>
-      </div>
-
-      <div
-        className="p-3 my-2 rounded bg-docs-transparent-grid"
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          position: "absolute",
-          right: "0",
-          bottom: "0",
-        }}
-      >
-        <Toast isOpen={toastIsOpen}>
-          <ToastHeader>{toastStatus}</ToastHeader>
-          <ToastBody>{toastMessage}</ToastBody>
-        </Toast>
       </div>
     </Layout>
   )

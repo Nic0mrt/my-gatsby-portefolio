@@ -6,7 +6,9 @@ import { Link } from "gatsby"
 const Header = props => {
   return (
     <header className="menu__header">
-      <img alt="Nicolas développeur" src={avatar}></img>
+      <Link to={"/"} style={{ textDecoration: "none" }}>
+        <img alt="Nicolas développeur" src={avatar}></img>
+      </Link>
 
       <Link to={"/"} style={{ textDecoration: "none" }}>
         <div className="menu__title">
