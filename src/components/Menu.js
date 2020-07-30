@@ -15,7 +15,7 @@ const Menu = () => {
     <div className="menu-wrapper">
       <div className="social-bar">
         <Link
-          to="https://github.com/Spartack"
+          to="https://github.com/Nic0mrt"
           style={{ textDecoration: "none" }}
         >
           <FontAwesomeIcon icon={faGithub} size="1x" />
