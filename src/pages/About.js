@@ -33,14 +33,14 @@ const About = () => {
               management et après 6 ans dans le recrutement technique de profils
               cadres et cadres supérieurs dans l'industrie, j'ai décidé
               retourner à mes premiers amours et de reprendre une formation en
-              le développement Web. <br></br>
+              développement Web. <br></br>
               <br></br>
               <span>Développeur Fullstack Javascript</span>. Je suis plus
               particulièrement spécialisé sur les frameworks <span>React</span>{" "}
               en frontend et <span>Express/NodeJS</span> en backend.<br></br>
               <br></br>
               Aujourd'hui ouvert aux opportunités sur <span>Lyon</span> et
-              disponible pour vous accompagner dans vos développement de projets
+              disponible pour vous accompagner dans vos développements de projets
               web.
             </p>
           </div>
@@ -95,7 +95,7 @@ const About = () => {
             </h4>
             <p className="about__frontend__paragraph">
               Mon domaine de prédilection avec l'envie de m'améliorer jours
-              après jours. J'aimerais participer au développement d'application
+              après jours. J'aimerais participer au développement d'applications
               complexes. <br></br>
               <br></br>
               <ul>
@@ -138,7 +138,7 @@ const About = () => {
               Développement mobile
             </h4>
             <p className="about__mobile__paragraph">
-              Ayant déjà une expérience significative en développement Android
+              Ayant déjà eu une expérience significative en développement Android
               dans une autre vie, j'ai naturellement envie de retourner sur les
               environnements mobiles.<br></br>
               <br></br>
