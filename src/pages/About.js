@@ -63,7 +63,7 @@ const About = () => {
             <div className="about__social-bar">
               {" "}
               <Link
-                to="https://github.com/Spartack"
+                to="https://github.com/Nic0mrt"
                 style={{ textDecoration: "none" }}
               >
                 <FontAwesomeIcon icon={faGithub} size="3x" />{" "}
