@@ -7,6 +7,11 @@
   font-size: 1.75rem;
   color: #0ba376;
 }
+
+.article-section h4 {
+  margin: 30px 0;
+}
+
 .article__date {
   margin-bottom: 40px;
   font-weight: bold;
@@ -17,8 +22,9 @@
 }
 
 .article__content img {
+  margin: 30px;
   width: 100%;
-  display: block;
+  margin: 30px auto;
 }
 
 .article__image {
@@ -78,6 +84,6 @@ blockquote p {
   .article__content img {
     width: 80%;
     display: block;
-    margin: auto;
+    margin: 30px auto;
   }
 }
