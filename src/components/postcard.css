@@ -28,7 +28,7 @@
     flex-direction: row;
   }
   .postcard__content {
-    width: 60%;
+    width: 600px;
   }
 
   .postcard__image {

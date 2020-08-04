@@ -26,7 +26,7 @@ const Blog = ({ data }) => {
 
 export const blogQuery = graphql`
   query blogQuery {
-    allStrapiArticle {
+    allStrapiArticle(sort: { fields: published_at, order: DESC }) {
       edges {
         node {
           strapiId

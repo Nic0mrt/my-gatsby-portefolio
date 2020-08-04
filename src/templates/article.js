@@ -30,7 +30,11 @@ const Article = ({ data }) => {
   return (
     <Layout>
       <div className="article-section">
-        <Img fluid={article.image.childImageSharp.fluid} alt=""></Img>
+        <Img
+          style={{ margin: "10px 0" }}
+          fluid={article.image.childImageSharp.fluid}
+          alt=""
+        ></Img>
         <h3>{article.title}</h3>
         <p className="article__date">
           publié le{" "}

@@ -89,9 +89,9 @@ const Contact = () => {
         <p className="contact-paragraph">
           {" "}
           Un projet front end en <span>React</span> à me confier ou en back end{" "}
-          <span>Express</span> ? Un recrutement d'un développeur{" "}
-          <span>Javascript</span> ? N'hésitez pas à me joindre en me laissant
-          vos coordonnées, je vous recontacterai au plus vite !{" "}
+          <span>Express</span> ? Besoin d'un développeur <span>Javascript</span>{" "}
+          fullstack? N'hésitez pas à me joindre en me laissant vos coordonnées,
+          je vous recontacterai au plus vite !{" "}
         </p>
 
         <form className="contact-form" method="POST" onSubmit={handleSubmit}>
@@ -175,6 +175,10 @@ const Contact = () => {
             71 67 04 64
           </p>
         </form>
+        <p className="contact-paragraph">
+          {" "}
+          Dispobile sur <span>Lyon</span> ou en <span> remote</span>
+        </p>
       </div>
     </Layout>
   )

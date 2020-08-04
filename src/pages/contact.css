@@ -2,6 +2,10 @@
   display: block;
   padding: 60px 20px;
 }
+
+.contact-section h3 {
+  margin: 0 0 40px 0;
+}
 .contact-title span,
 .contact-paragraph span {
   color: #0ba376;
