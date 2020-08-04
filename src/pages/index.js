@@ -20,7 +20,12 @@ const Home = () => (
         <h3>
           Nicolas <span>MARET</span>
         </h3>
-        <h2> Développeur Web sur Lyon</h2>
+        <h2> Développeur Web Freelance sur Lyon</h2>
+        <p>
+          {" "}
+          Spécialiste React, je vous accompagne dans vos projets de
+          développement{" "}
+        </p>
         <div className="logos">
           <i className="react">
             <FontAwesomeIcon icon={faReact} size="1x" />{" "}

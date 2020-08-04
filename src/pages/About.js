@@ -3,11 +3,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import "./about.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faInstagram,
-  faGithub,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import {
   faMobileAlt,
   faDesktop,
@@ -103,6 +99,7 @@ const About = () => {
                 <li>Gatsby</li>
                 <li>Svelte</li>
                 <li>Vanilla Javascript</li>
+                <li>Wordpress</li>
               </ul>
             </p>
           </div>

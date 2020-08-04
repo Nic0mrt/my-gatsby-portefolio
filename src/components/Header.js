@@ -18,7 +18,7 @@ const Header = props => {
       <Link to={"/"} style={{ textDecoration: "none" }}>
         <div className="menu__title">
           <p>Nicolas Maret</p>
-          <h1>Développeur Web</h1>
+          <h1>Développeur React Freelance</h1>
         </div>
       </Link>
 

@@ -1,7 +1,7 @@
 ---
-slug: "mon-portefolio-en-gatsby-et-react"
+slug: "mon-portfolio-en-gatsby-et-react"
 date: "2020-07-28"
-title: "Mon portflio en Gatsby et React"
+title: "Mon portfolio en Gatsby et React"
 presentation: "Site portfolio entièrement responsive avec un générateur
   de sites statiques"
 featuredImage: ../images/projects/portfolio-v1-presentation.png
