@@ -72,7 +72,7 @@ const Header = props => {
       <ul className="menu__social-medias">
         <li>
           <Link
-            to="https://github.com/Spartack"
+            to="https://github.com/Nic0mrt"
             style={{ textDecoration: "none" }}
           >
             <FontAwesomeIcon icon={faGithub} size="2x" />
