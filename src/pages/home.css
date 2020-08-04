@@ -8,17 +8,16 @@
 }
 
 .home__image {
-  margin: 40px 0;
+  margin: 0 0 40px 0;
   width: 100%;
 }
 
 .home h3 {
   text-align: center;
-  font-size: 48px;
   color: #222222;
   font-weight: 600;
   margin-bottom: 10px;
-  font-size: 48px;
+  font-size: 2em;
 }
 
 .home h3 span {
@@ -27,6 +26,7 @@
 
 .home h2 {
   text-align: center;
+  font-size: 1em;
 }
 
 .home p {
@@ -35,16 +35,17 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 5px;
+  font-size: 0.7em;
 }
 .logos {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .logos i {
   display: block;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   font-size: 40px;
   line-height: 40px;
   margin: 0 10px;
@@ -67,8 +68,9 @@
 }
 
 .go-to-btns-wrapper .btn {
-  width: 180px;
-  height: 50px;
+  width: 160px;
+  height: 40px;
+  font-size: 0.8em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +110,29 @@
   }
   .home__image {
     display: block;
-    max-width: 700px;
+    max-width: 600px;
+  }
+
+  .home h3 {
+    font-size: 3em;
+  }
+
+  .home h2 {
+    font-size: 2em;
+  }
+
+  .home p {
+    font-size: 1em;
+  }
+  .logos i {
+    height: 40px;
+    width: 40px;
+  }
+
+  .go-to-btns-wrapper .btn {
+    width: 180px;
+    height: 50px;
+    font-size: 1em;
   }
 }
 
