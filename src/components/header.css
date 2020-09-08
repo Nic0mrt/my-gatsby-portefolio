@@ -34,13 +34,18 @@
   color: #fff;
 }
 
-.menu__header img {
+.menu__header__portrait {
   height: 120px;
   width: 120px;
+  margin-bottom: 20px;
   border-radius: 300px;
   box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.22);
   border: 3px solid #ffffff;
   object-fit: cover;
+}
+
+.menu__header__logo {
+  width: 250px;
 }
 
 .menu__navigation {
@@ -135,8 +140,12 @@
     justify-content: space-between;
     background-color: #0ba376;
   }
-  .menu__header img {
+  .menu__header__portrait {
     display: none;
+  }
+
+  .menu__header__logo {
+    width: 275px;
   }
 
   .menu__navigation {

@@ -1,6 +1,7 @@
 import React from "react"
 import "./header.css"
 import avatar from "../images/avatar.jpg"
+import logo from "../images/logo.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faInstagram,
@@ -9,18 +10,28 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import { Link } from "gatsby"
-
-const Header = props => {
-  return (
-    <header className="menu__header">
-      <img alt="Nicolas développeur" src={avatar}></img>
-
-      <Link to={"/"} style={{ textDecoration: "none" }}>
+/*
+  <Link to={"/"} style={{ textDecoration: "none" }}>
         <div className="menu__title">
           <p>Nicolas Maret</p>
           <h1>Développeur React Freelance</h1>
         </div>
       </Link>
+      */
+
+const Header = props => {
+  return (
+    <header className="menu__header">
+      <div>
+        <img
+          className="menu__header__portrait"
+          alt="Nicolas développeur"
+          src={avatar}
+        ></img>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <img className="menu__header__logo" alt="logo" src={logo}></img>
+        </Link>
+      </div>
 
       <ul className="menu__navigation">
         <li>
