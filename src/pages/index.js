@@ -20,13 +20,13 @@ const Home = () => (
         <h3>
           Nicolas <span>MARET</span>
         </h3>
-        <h2>
+        <h1>
           {" "}
-          Développeur Web Freelance<br></br> React/NodeJS
-        </h2>
+          Développeur Fullstack <br></br> React & NodeJS Freelance
+        </h1>
         <p>
-          Passionné par le développement web, je vous accompagne sur tous vos
-          projets fullstack
+          Passionné par le web, je vous accompagne sur vos projets de
+          développement d'applications
         </p>
         <div className="logos">
           <i className="react">
@@ -41,11 +41,11 @@ const Home = () => (
         </div>
         <div className="go-to-btns-wrapper">
           <Link to="/Projects" style={{ textDecoration: "none" }}>
-            <div className="btn">Voir mon portefolio</div>
+            <div className="btn">Mes Projets</div>
           </Link>
           <Link to="/About" style={{ textDecoration: "none" }}>
             <div className="btn">
-              <span>En savoir plus</span>
+              <span>Mon profil</span>
             </div>
           </Link>
         </div>

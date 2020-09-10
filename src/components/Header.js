@@ -2,6 +2,7 @@ import React from "react"
 import "./header.css"
 import avatar from "../images/avatar.jpg"
 import logo from "../images/logo.svg"
+import cv from "../pdf/Nicolas-MARET-CV-2020.pdf"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faInstagram,
@@ -106,8 +107,10 @@ const Header = props => {
           </Link>
         </li>
       </ul>
+      <a href={cv} target="_blank" className="menu__download__link">
+        <div className="menu__download-btn">Télécharger CV</div>
+      </a>
 
-      <div className="menu__download-btn">Télécharger CV</div>
       <div className="menu__copyright">
         all rights reserved. Made with React and Gatsby
       </div>

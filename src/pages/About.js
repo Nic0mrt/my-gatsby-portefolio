@@ -10,6 +10,7 @@ import {
   faServer,
   faCloud,
 } from "@fortawesome/free-solid-svg-icons"
+import cv from "../pdf/Nicolas-MARET-CV-2020.pdf"
 
 import { Link } from "gatsby"
 
@@ -36,10 +37,11 @@ const About = () => {
               en frontend et <span>Express/NodeJS</span> en backend.<br></br>
               <br></br>
               Aujourd'hui ouvert aux opportunités sur <span>Lyon</span> et
-              disponible pour vous accompagner dans vos développements de projets
-              web.
+              disponible pour vous accompagner dans vos développements de
+              projets web.
             </p>
           </div>
+
           <div className="col-sm-12 col-md-6 infos">
             <div>
               <span>Age </span>28
@@ -49,8 +51,8 @@ const About = () => {
             </div>
             <div>
               <span>Email </span>
-              <a href="mailto:maret.nicolas@gmail.com">
-                maret.nicolas@gmail.com
+              <a href="mailto:maretnicolas22@gmail.com">
+                maretnicolas22@gmail.com
               </a>
             </div>
             <div>
@@ -60,16 +62,18 @@ const About = () => {
               {" "}
               <Link
                 to="https://github.com/Nic0mrt"
+                target="_blank"
                 style={{ textDecoration: "none" }}
               >
-                <FontAwesomeIcon icon={faGithub} size="3x" />{" "}
+                <FontAwesomeIcon icon={faGithub} size="2x" />{" "}
                 <p>Visiter mon profil GitHub</p>
               </Link>
               <Link
                 to="https://www.linkedin.com/in/nicolas-maret-linkedin"
+                target="_blank"
                 style={{ textDecoration: "none" }}
               >
-                <FontAwesomeIcon icon={faLinkedinIn} size="3x" />{" "}
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />{" "}
                 <p>Visiter mon profil Linkedin</p>
               </Link>
             </div>
@@ -135,9 +139,9 @@ const About = () => {
               Développement mobile
             </h4>
             <p className="about__mobile__paragraph">
-              Ayant déjà eu une expérience significative en développement Android
-              dans une autre vie, j'ai naturellement envie de retourner sur les
-              environnements mobiles.<br></br>
+              Ayant déjà eu une expérience significative en développement
+              Android dans une autre vie, j'ai naturellement envie de retourner
+              sur les environnements mobiles.<br></br>
               <br></br>
               <ul>
                 <li>Swift/iOS (en cours de formation)</li>
@@ -165,6 +169,11 @@ const About = () => {
               </ul>
             </p>
           </div>
+        </div>
+        <div className="download-wrapper">
+          <a href={cv} target="_blank">
+            <div className="download-btn"> Télécharger mon CV</div>
+          </a>
         </div>
       </div>
     </Layout>

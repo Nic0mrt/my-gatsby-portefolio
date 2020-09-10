@@ -16,18 +16,21 @@ const Menu = () => {
       <div className="social-bar">
         <Link
           to="https://github.com/Nic0mrt"
+          target="_blank"
           style={{ textDecoration: "none" }}
         >
           <FontAwesomeIcon icon={faGithub} size="1x" />
         </Link>
         <Link
           to="https://www.linkedin.com/in/nicolas-maret-linkedin"
+          target="_blank"
           style={{ textDecoration: "none" }}
         >
           <FontAwesomeIcon icon={faLinkedinIn} size="1x" />
         </Link>
         <Link
           to="https://www.instagram.com/nic0_mrt/"
+          target="_blank"
           style={{ textDecoration: "none" }}
         >
           <FontAwesomeIcon icon={faInstagram} size="1x" />{" "}
