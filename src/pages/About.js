@@ -22,21 +22,29 @@ const About = () => {
   const backend = useRef(null)
   const mobile = useRef(null)
   const deploy = useRef(null)
+  const buttons = useRef(null)
 
   //rotation for preventing slow animations on firefox due to a bug
 
   useEffect(() => {
     TweenMax.fromTo(
       about.current,
-      2,
-      { opacity: 0, rotation: 0.01 },
-      { opacity: 1, rotation: 0.01 }
+      1,
+      { scale: 0.5, rotation: 0.01 },
+      { scale: 1, rotation: 0.01 }
     )
     TweenMax.fromTo(
       infos.current,
-      2,
-      { opacity: 0, rotation: 0.01 },
-      { opacity: 1, rotation: 0.01 }
+      1,
+      { scale: 0.5, rotation: 0.01 },
+      { scale: 1, rotation: 0.01 }
+    )
+
+    TweenMax.fromTo(
+      buttons.current,
+      1,
+      { scale: 0.5, rotation: 0.01 },
+      { scale: 1, rotation: 0.01 }
     )
 
     const timeline = new Timeline()
@@ -76,14 +84,14 @@ const About = () => {
   return (
     <Layout>
       <SEO title="A propos" />
-      <div className="about-section" ref={about}>
+      <div className="about-section">
         <h3>
           A propos de <span>moi</span>
         </h3>
 
         <div className="row">
           <div className="col-sm-12 col-md-6 about-me">
-            <p className="about__paragraph">
+            <p className="about__paragraph" ref={about}>
               Diplômé d'un <span>DUT informatique</span> et d'un Master en
               management et après 6 ans dans le recrutement technique de profils
               cadres et cadres supérieurs dans l'industrie, j'ai décidé
@@ -108,12 +116,7 @@ const About = () => {
             <div>
               <span>Langues </span>Francais, Anglais
             </div>
-            <div>
-              <span>Email </span>
-              <a href="mailto:maretnicolas22@gmail.com">
-                maretnicolas22@gmail.com
-              </a>
-            </div>
+
             <div>
               <span>Téléphone </span>+33 (0)7 71 67 04 64
             </div>
@@ -137,6 +140,22 @@ const About = () => {
               </Link>
             </div>
           </div>
+        </div>
+
+        <div className="btns-wrapper" ref={buttons}>
+          <Link
+            to={"/Contact"}
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <div className="custom-btn"> Contactez moi</div>
+          </Link>
+          <a href={cv} target="_blank">
+            <div className="custom-btn"> Télécharger mon CV</div>
+          </a>
         </div>
 
         <h3>
@@ -228,11 +247,6 @@ const About = () => {
               </ul>
             </p>
           </div>
-        </div>
-        <div className="download-wrapper">
-          <a href={cv} target="_blank">
-            <div className="download-btn"> Télécharger mon CV</div>
-          </a>
         </div>
       </div>
     </Layout>

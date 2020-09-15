@@ -22,7 +22,7 @@ const Contact = () => {
     TweenMax.fromTo(
       form.current,
       1,
-      { opacity: 0, y: 200, rotation: 0.1, force3D: true },
+      { opacity: 0, y: 100, rotation: 0.1, force3D: true },
       { opacity: 1, y: 0, rotation: 0.1, force3D: true }
     )
   }, [])
