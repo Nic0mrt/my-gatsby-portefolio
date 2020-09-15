@@ -1,11 +1,14 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import "./contact.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons"
+import { TweenMax } from "gsap"
 
 const Contact = () => {
+  const form = useRef(null)
+
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
@@ -14,6 +17,15 @@ const Contact = () => {
 
   const [sendStatus, setSendStatus] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    TweenMax.fromTo(
+      form.current,
+      1,
+      { opacity: 0, y: 200, rotation: 0.1, force3D: true },
+      { opacity: 1, y: 0, rotation: 0.1, force3D: true }
+    )
+  }, [])
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -94,7 +106,12 @@ const Contact = () => {
           je vous recontacterai au plus vite !{" "}
         </p>
 
-        <form className="contact-form" method="POST" onSubmit={handleSubmit}>
+        <form
+          className="contact-form"
+          method="POST"
+          onSubmit={handleSubmit}
+          ref={form}
+        >
           <div className="form-group">
             <label htmlFor="name">
               Votre nom :

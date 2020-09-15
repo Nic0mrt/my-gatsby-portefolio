@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import "./about.css"
@@ -11,14 +11,72 @@ import {
   faCloud,
 } from "@fortawesome/free-solid-svg-icons"
 import cv from "../pdf/Nicolas-MARET-CV-2020.pdf"
-
+import { TweenMax } from "gsap"
+import { Timeline } from "gsap/gsap-core"
 import { Link } from "gatsby"
 
 const About = () => {
+  const about = useRef(null)
+  const infos = useRef(null)
+  const frontend = useRef(null)
+  const backend = useRef(null)
+  const mobile = useRef(null)
+  const deploy = useRef(null)
+
+  //rotation for preventing slow animations on firefox due to a bug
+
+  useEffect(() => {
+    TweenMax.fromTo(
+      about.current,
+      2,
+      { opacity: 0, rotation: 0.01 },
+      { opacity: 1, rotation: 0.01 }
+    )
+    TweenMax.fromTo(
+      infos.current,
+      2,
+      { opacity: 0, rotation: 0.01 },
+      { opacity: 1, rotation: 0.01 }
+    )
+
+    const timeline = new Timeline()
+    timeline.fromTo(
+      frontend.current,
+      0.5,
+      { opacity: 0, y: 200, rotation: 0.01 },
+      { opacity: 1, y: 0, rotation: 0.01 }
+    )
+    timeline.fromTo(
+      backend.current,
+      0.5,
+      { opacity: 0, y: 200, rotation: 0.01 },
+      { opacity: 1, y: 0, rotation: 0.01 }
+    )
+    timeline.fromTo(
+      mobile.current,
+      0.5,
+      { opacity: 0, y: 200, rotation: 0.01 },
+      { opacity: 1, y: 0, rotation: 0.01 }
+    )
+    timeline.fromTo(
+      deploy.current,
+      0.5,
+      { opacity: 0, y: 200, rotation: 0.01 },
+      { opacity: 1, y: 0, rotation: 0.01 }
+    )
+  }, [])
+
+  function calculateAge(birthdayString) {
+    const birthday = new Date("12/22/1991")
+    var ageDifMs = Date.now() - birthday.getTime()
+    var ageDate = new Date(ageDifMs)
+    return Math.abs(ageDate.getUTCFullYear() - 1970)
+  }
+
   return (
     <Layout>
       <SEO title="A propos" />
-      <div className="about-section">
+      <div className="about-section" ref={about}>
         <h3>
           A propos de <span>moi</span>
         </h3>
@@ -42,9 +100,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-sm-12 col-md-6 infos">
+          <div className="col-sm-12 col-md-6 infos" ref={infos}>
             <div>
-              <span>Age </span>28
+              <span>Age </span>
+              {calculateAge("22/12/1991")}
             </div>
             <div>
               <span>Langues </span>Francais, Anglais
@@ -85,7 +144,7 @@ const About = () => {
         </h3>
 
         <div className="row">
-          <div className="col-sm-12 col-md-6 skills-content">
+          <div className="col-sm-12 col-md-6 skills-content" ref={frontend}>
             <h4>
               {" "}
               <i>
@@ -108,7 +167,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-sm-12 col-md-6 skills-content">
+          <div className="col-sm-12 col-md-6 skills-content" ref={backend}>
             <h4>
               {" "}
               <i>
@@ -130,7 +189,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-sm-12 col-md-6 skills-content">
+          <div className="col-sm-12 col-md-6 skills-content" ref={mobile}>
             <h4>
               {" "}
               <i>
@@ -149,7 +208,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-sm-12 col-md-6 skills-content">
+          <div className="col-sm-12 col-md-6 skills-content" ref={deploy}>
             <h4>
               {" "}
               <i>
