@@ -142,22 +142,6 @@ const About = () => {
           </div>
         </div>
 
-        <div className="btns-wrapper" ref={buttons}>
-          <Link
-            to={"/Contact"}
-            style={{
-              textDecoration: "none",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <div className="custom-btn"> Contactez moi</div>
-          </Link>
-          <a href={cv} target="_blank">
-            <div className="custom-btn"> Télécharger mon CV</div>
-          </a>
-        </div>
-
         <h3>
           Mes <span>compétences</span>
         </h3>

@@ -7,6 +7,10 @@
   font-size: 1.75rem;
   color: #0ba376;
 }
+.project-section h4,
+.project-section h5 {
+  font-weight: bold;
+}
 
 .project-content {
   display: block;
@@ -15,11 +19,5 @@
 @media screen and (min-width: 640px) {
   .project-section {
     padding: 30px 20%;
-  }
-
-  .project-content img {
-    width: 80%;
-    display: block;
-    margin: auto;
   }
 }

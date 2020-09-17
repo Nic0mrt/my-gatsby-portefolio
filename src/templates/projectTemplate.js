@@ -16,14 +16,16 @@ export default function Template({
   return (
     <Layout>
       <div className="project-section">
-        <h3>{frontmatter.title}</h3>
+        <h3>{frontmatter.title} </h3>
         <div>
           <Moment locale="fr" format="Do MMMM YYYY">
             {frontmatter.date}
           </Moment>
         </div>
         <Img fluid={featuredImage} alt={alt}></Img>
-
+        <a href={frontmatter.github} alt="lien vers mon code github">
+          {frontmatter.github}
+        </a>
         <div
           className="project-content"
           dangerouslySetInnerHTML={{ __html: html }}

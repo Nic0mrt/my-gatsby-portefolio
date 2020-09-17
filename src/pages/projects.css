@@ -1,5 +1,6 @@
 .projects-section {
   padding: 60px 20px;
+  flex: 1;
 }
 
 .projects-section span {

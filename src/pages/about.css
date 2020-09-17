@@ -83,9 +83,10 @@
 }
 
 .custom-btn {
-  width: 160px;
-  height: 60px;
-  font-size: 0.8em;
+  height: 50px;
+  width: 180px;
+  padding: 6px 12px;
+  font-size: 1em;
   display: flex;
   justify-content: center;
   align-items: center;

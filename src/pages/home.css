@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
   padding: 0px 20px;
+  flex: 1;
 }
 
 .home__image {
@@ -103,6 +103,26 @@
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+.home__blog {
+  height: 50vh;
+  background-color: #fff;
+}
+
+.banner {
+  background-color: #0ba376;
+  padding: 0 60px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.22);
+}
+.banner h3 {
+  text-align: center;
 }
 
 @media screen and (min-width: 640px) {

@@ -194,7 +194,7 @@ const Contact = () => {
         </form>
         <p className="contact-paragraph">
           {" "}
-          Dispobile sur <span>Lyon</span> ou en <span> remote</span>
+          Disponible sur <span>Lyon</span> ou en <span> remote</span>
         </p>
       </div>
     </Layout>
