@@ -24,13 +24,6 @@ const ProjectCard = ({ project }) => {
           <div className="project-card__description">
             <h4>{project.frontmatter.title}</h4>
             <p>{project.frontmatter.presentation}</p>
-
-            <ul className="project-card__skills-list">
-              {" "}
-              {project.frontmatter.skills.map(skill => {
-                return <li>{skill}</li>
-              })}
-            </ul>
           </div>
           <div className="project-card__hover-about">
             <FontAwesomeIcon icon={faSearch} size="2x"></FontAwesomeIcon>

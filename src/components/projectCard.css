@@ -5,15 +5,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  height: 420px;
-}
-
-.project-card img {
 }
 
 .project-card__description {
   background-color: #eee;
-  flex: 1;
+  height: 120px;
   padding: 10px;
   display: flex;
   flex-direction: column;

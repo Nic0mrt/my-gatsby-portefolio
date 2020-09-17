@@ -107,17 +107,17 @@ const About = () => {
               projets web.
             </p>
             <div className="col-sm12 col-md 6">
-              <div>
+              <p>
                 <span>Age </span>
                 {calculateAge("22/12/1991")}
-              </div>
-              <div>
+              </p>
+              <p>
                 <span>Langues </span>Francais, Anglais
-              </div>
+              </p>
 
-              <div>
+              <p>
                 <span>Téléphone </span>+33 (0)7 71 67 04 64
-              </div>
+              </p>
 
               <div className="about__social-bar">
                 {" "}
