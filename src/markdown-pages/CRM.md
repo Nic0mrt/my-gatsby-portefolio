@@ -2,8 +2,7 @@
 slug: "mon-crm-typescript-react-express"
 date: "2020-09-26"
 title: "Mon CRM perso avec React et Typescript"
-presentation: "Site portfolio entièrement responsive avec un générateur
-  de sites statiques"
+presentation: "Gestion de clients et factures avec React"
 featuredImage: ../images/projects/CRM-presentation.png
 alt: "mon site gatsby et react"
 skills: [Typescript, React, Express, MongoDB, MaterialUI]

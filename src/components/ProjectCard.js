@@ -15,9 +15,11 @@ const ProjectCard = ({ project }) => {
         style={{ textDecoration: "none", color: "black" }}
       >
         <div className="project-card">
-          <Img
-            fluid={project.frontmatter.featuredImage.childImageSharp.fluid}
-          ></Img>
+          <div>
+            <Img
+              fluid={project.frontmatter.featuredImage.childImageSharp.fluid}
+            ></Img>
+          </div>
 
           <div className="project-card__description">
             <h4>{project.frontmatter.title}</h4>

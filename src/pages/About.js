@@ -10,19 +10,18 @@ import {
   faServer,
   faCloud,
 } from "@fortawesome/free-solid-svg-icons"
-import cv from "../pdf/Nicolas-MARET-CV-2020.pdf"
+import devReactActivityImage from "../images/dev-react-activity.svg"
 import { TweenMax } from "gsap"
 import { Timeline } from "gsap/gsap-core"
 import { Link } from "gatsby"
 
 const About = () => {
   const about = useRef(null)
-  const infos = useRef(null)
+  const firstImage = useRef(null)
   const frontend = useRef(null)
   const backend = useRef(null)
   const mobile = useRef(null)
   const deploy = useRef(null)
-  const buttons = useRef(null)
 
   //rotation for preventing slow animations on firefox due to a bug
 
@@ -34,17 +33,10 @@ const About = () => {
       { scale: 1, rotation: 0.01 }
     )
     TweenMax.fromTo(
-      infos.current,
+      firstImage.current,
       1,
-      { scale: 0.5, rotation: 0.01 },
-      { scale: 1, rotation: 0.01 }
-    )
-
-    TweenMax.fromTo(
-      buttons.current,
-      1,
-      { scale: 0.5, rotation: 0.01 },
-      { scale: 1, rotation: 0.01 }
+      { x: -200, rotation: 0.01 },
+      { x: 0, rotation: 0.01 }
     )
 
     const timeline = new Timeline()
@@ -90,8 +82,16 @@ const About = () => {
         </h3>
 
         <div className="row">
-          <div className="col-sm-12 col-md-6 about-me">
-            <p className="about__paragraph" ref={about}>
+          <div className="col-sm-12 col-lg-6 about-section__image">
+            <img
+              src={devReactActivityImage}
+              alt="activité développeur web react"
+              ref={firstImage}
+            ></img>
+          </div>
+
+          <div className="col-sm-12 col-lg-6 about-me" ref={about}>
+            <p className="about__paragraph">
               Diplômé d'un <span>DUT informatique</span> et d'un Master en
               management et après 6 ans dans le recrutement technique de profils
               cadres et cadres supérieurs dans l'industrie, j'ai décidé
@@ -106,38 +106,38 @@ const About = () => {
               disponible pour vous accompagner dans vos développements de
               projets web.
             </p>
-          </div>
+            <div className="col-sm12 col-md 6">
+              <div>
+                <span>Age </span>
+                {calculateAge("22/12/1991")}
+              </div>
+              <div>
+                <span>Langues </span>Francais, Anglais
+              </div>
 
-          <div className="col-sm-12 col-md-6 infos" ref={infos}>
-            <div>
-              <span>Age </span>
-              {calculateAge("22/12/1991")}
-            </div>
-            <div>
-              <span>Langues </span>Francais, Anglais
-            </div>
+              <div>
+                <span>Téléphone </span>+33 (0)7 71 67 04 64
+              </div>
 
-            <div>
-              <span>Téléphone </span>+33 (0)7 71 67 04 64
-            </div>
-            <div className="about__social-bar">
-              {" "}
-              <Link
-                to="https://github.com/Nic0mrt"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <FontAwesomeIcon icon={faGithub} size="2x" />{" "}
-                <p>Visiter mon profil GitHub</p>
-              </Link>
-              <Link
-                to="https://www.linkedin.com/in/nicolas-maret-linkedin"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />{" "}
-                <p>Visiter mon profil Linkedin</p>
-              </Link>
+              <div className="about__social-bar">
+                {" "}
+                <Link
+                  to="https://github.com/Nic0mrt"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <FontAwesomeIcon icon={faGithub} size="2x" />{" "}
+                  <p>Visiter mon profil GitHub</p>
+                </Link>
+                <Link
+                  to="https://www.linkedin.com/in/nicolas-maret-linkedin"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn} size="2x" />{" "}
+                  <p>Visiter mon profil Linkedin</p>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ const About = () => {
         </h3>
 
         <div className="row">
-          <div className="col-sm-12 col-md-6 skills-content" ref={frontend}>
+          <div className="col-sm-12 col-lg-6 skills-content" ref={frontend}>
             <h4>
               {" "}
               <i>
@@ -170,7 +170,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-sm-12 col-md-6 skills-content" ref={backend}>
+          <div className="col-sm-12 col-lg-6 skills-content" ref={backend}>
             <h4>
               {" "}
               <i>
@@ -192,7 +192,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-sm-12 col-md-6 skills-content" ref={mobile}>
+          <div className="col-sm-12 col-lg-6 skills-content" ref={mobile}>
             <h4>
               {" "}
               <i>
@@ -211,7 +211,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="col-sm-12 col-md-6 skills-content" ref={deploy}>
+          <div className="col-sm-12 col-lg-6 skills-content" ref={deploy}>
             <h4>
               {" "}
               <i>

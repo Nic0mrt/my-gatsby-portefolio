@@ -20,6 +20,18 @@
   color: #0ba376;
   font-weight: bold;
 }
+
+.about-section__image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-section__image img {
+  margin: 0;
+  width: 100%;
+}
+
 .infos {
   display: flex;
   flex-direction: column;
@@ -30,10 +42,6 @@
 }
 .infos span {
   margin-right: 10px;
-}
-.infos img {
-  width: 100%;
-  flex-grow: 1;
 }
 
 .about__social-bar {
