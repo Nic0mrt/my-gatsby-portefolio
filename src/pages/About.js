@@ -90,7 +90,7 @@ const About = () => {
             ></img>
           </div>
 
-          <div className="col-sm-12 col-lg-6 about-me" ref={about}>
+          <div className="col-sm-12  col-lg-6 about-me" ref={about}>
             <p className="about__paragraph">
               Diplômé d'un <span>DUT informatique</span> et d'un Master en
               management et après 6 ans dans le recrutement technique de profils
@@ -106,38 +106,37 @@ const About = () => {
               disponible pour vous accompagner dans vos développements de
               projets web.
             </p>
-            <div className="col-sm12 col-md 6">
-              <p>
-                <span>Age </span>
-                {calculateAge("22/12/1991")}
-              </p>
-              <p>
-                <span>Langues </span>Francais, Anglais
-              </p>
 
-              <p>
-                <span>Téléphone </span>+33 (0)7 71 67 04 64
-              </p>
+            <p>
+              <span>Age </span>
+              {calculateAge("22/12/1991")}
+            </p>
+            <p>
+              <span>Langues </span>Francais, Anglais
+            </p>
 
-              <div className="about__social-bar">
-                {" "}
-                <Link
-                  to="https://github.com/Nic0mrt"
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                >
-                  <FontAwesomeIcon icon={faGithub} size="2x" />{" "}
-                  <p>Visiter mon profil GitHub</p>
-                </Link>
-                <Link
-                  to="https://www.linkedin.com/in/nicolas-maret-linkedin"
-                  target="_blank"
-                  style={{ textDecoration: "none" }}
-                >
-                  <FontAwesomeIcon icon={faLinkedinIn} size="2x" />{" "}
-                  <p>Visiter mon profil Linkedin</p>
-                </Link>
-              </div>
+            <p>
+              <span>Téléphone </span>+33 (0)7 71 67 04 64
+            </p>
+
+            <div className="about__social-bar">
+              {" "}
+              <Link
+                to="https://github.com/Nic0mrt"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" />{" "}
+                <p>Visiter mon profil GitHub</p>
+              </Link>
+              <Link
+                to="https://www.linkedin.com/in/nicolas-maret-linkedin"
+                target="_blank"
+                style={{ textDecoration: "none" }}
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />{" "}
+                <p>Visiter mon profil Linkedin</p>
+              </Link>
             </div>
           </div>
         </div>

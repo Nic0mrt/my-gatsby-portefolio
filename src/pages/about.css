@@ -29,7 +29,9 @@
 
 .about-section__image img {
   margin: 0;
-  width: 100%;
+
+  max-height: 400px;
+  object-fit: contain;
 }
 
 .infos {

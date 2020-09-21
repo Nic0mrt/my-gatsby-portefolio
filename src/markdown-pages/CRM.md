@@ -54,3 +54,15 @@ github: "https://github.com/Nic0mrt/my-CRM-with-react-and-typescript"
     <br><br>
     ![ajout d'un commentaire](../images/projects/CRM/ajout-commentaire.png)
     <br><br>
+
+<br>
+
+##### Futurs ajouts de fonctionnalités
+
+<br>
+
+Encore en développement, je souhaite ajouter les fonctionnalités suivantes :
+
+- ajouter et de générer des factures en PDF
+- avoir un suivi mois par mois de son chiffre d'affaires et des factures
+- un dashboard basé sur D3.js pour avoir un vue globale de l'activité
