@@ -82,7 +82,7 @@ const About = () => {
         </h3>
 
         <div className="row">
-          <div className="col-sm-12 col-lg-6 about-section__image">
+          <div className="col-sm-12 col-lg-12 col-xl-6 about-section__image">
             <img
               src={devReactActivityImage}
               alt="activité développeur web react"
@@ -90,7 +90,7 @@ const About = () => {
             ></img>
           </div>
 
-          <div className="col-sm-12  col-lg-6 about-me" ref={about}>
+          <div className="col-sm-12  col-lg-12 col-xl-6 about-me" ref={about}>
             <p className="about__paragraph">
               Diplômé d'un <span>DUT informatique</span> et d'un Master en
               management et après 6 ans dans le recrutement technique de profils

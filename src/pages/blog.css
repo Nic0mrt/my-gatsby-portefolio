@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 992px) {
   .blog-section {
     padding: 30px 150px;
   }

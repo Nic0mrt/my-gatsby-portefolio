@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => {
         style={{ textDecoration: "none", color: "black" }}
       >
         <div className="project-card">
-          <div>
+          <div className="project-card__image">
             <Img
               fluid={project.frontmatter.featuredImage.childImageSharp.fluid}
             ></Img>

@@ -40,6 +40,7 @@ export const blogQuery = graphql`
             }
           }
           slug
+          description
           published_at
         }
       }

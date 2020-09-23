@@ -11,7 +11,12 @@ const PostCard = ({ article }) => {
     <div className="postcard">
       <div className="postcard__image">
         <Link to={`/article/${article.slug}`}>
-          <Img fluid={article.image.childImageSharp.fluid} alt={article.slug} />
+          <Img
+            style={{ height: "100%" }}
+            imgStyle={{ objectFit: "cover" }}
+            fluid={article.image.childImageSharp.fluid}
+            alt={article.slug}
+          />
         </Link>
       </div>
       <div className="postcard__content">
@@ -27,6 +32,7 @@ const PostCard = ({ article }) => {
             {article.published_at}
           </Moment>
         </p>
+        <p className="postcard__content__description">{article.description}</p>
       </div>
     </div>
   )
