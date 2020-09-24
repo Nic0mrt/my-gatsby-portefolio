@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Nicolas MARET, Développeur Web React sur Lyon`,
-    description: `Je suis Nicolas MARET Développeur Web Fullstack React et NodeJS basé à Lyon`,
+    title: `Nicolas MARET, Développeur Fullstack React.JS et Node.JS sur Lyon`,
+    description: `Je suis Nicolas MARET Développeur Web Fullstack React.JS et Node.JS basé à Lyon`,
     author: `@nicolasmaret`,
     siteUrl: `https://nicolasmaret.fr/`,
   },

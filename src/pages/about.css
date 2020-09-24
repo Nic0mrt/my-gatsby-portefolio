@@ -24,14 +24,12 @@
 .about-section__image {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .about-section__image img {
-  margin: 0;
-
-  max-height: 400px;
-  object-fit: contain;
+  width: 100%;
 }
 
 .infos {

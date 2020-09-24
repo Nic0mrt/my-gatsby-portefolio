@@ -14,6 +14,7 @@ import devReactActivityImage from "../images/dev-react-activity.svg"
 import { TweenMax } from "gsap"
 import { Timeline } from "gsap/gsap-core"
 import { Link } from "gatsby"
+import { Container, Row, Col } from "reactstrap"
 
 const About = () => {
   const about = useRef(null)
@@ -81,65 +82,67 @@ const About = () => {
           A propos de <span>moi</span>
         </h3>
 
-        <div className="row">
-          <div className="col-sm-12 col-lg-12 col-xl-6 about-section__image">
-            <img
-              src={devReactActivityImage}
-              alt="activité développeur web react"
-              ref={firstImage}
-            ></img>
-          </div>
+        <Container fluid={true}>
+          <Row>
+            <Col sm="12" xl="6" className="about-section__image">
+              <img
+                src={devReactActivityImage}
+                alt="activité développeur web react"
+                ref={firstImage}
+              ></img>
+            </Col>
+            <Col className="about-me" sm="12" xl="6" ref={about}>
+              <p className="about__paragraph">
+                Diplômé d'un <span>DUT informatique</span> et d'un Master en
+                management et après 6 ans dans le recrutement technique de
+                profils cadres et cadres supérieurs dans l'industrie, j'ai
+                décidé retourner à mes premiers amours et de reprendre une
+                formation en développement Web. <br></br>
+                <br></br>
+                <span>Développeur Fullstack Javascript</span>. Je suis plus
+                particulièrement spécialisé sur les frameworks{" "}
+                <span>React</span> en frontend et <span>Express/NodeJS</span> en
+                backend.<br></br>
+                <br></br>
+                Aujourd'hui ouvert aux opportunités sur <span>Lyon</span> et
+                disponible pour vous accompagner dans vos développements de
+                projets web.
+              </p>
 
-          <div className="col-sm-12  col-lg-12 col-xl-6 about-me" ref={about}>
-            <p className="about__paragraph">
-              Diplômé d'un <span>DUT informatique</span> et d'un Master en
-              management et après 6 ans dans le recrutement technique de profils
-              cadres et cadres supérieurs dans l'industrie, j'ai décidé
-              retourner à mes premiers amours et de reprendre une formation en
-              développement Web. <br></br>
-              <br></br>
-              <span>Développeur Fullstack Javascript</span>. Je suis plus
-              particulièrement spécialisé sur les frameworks <span>React</span>{" "}
-              en frontend et <span>Express/NodeJS</span> en backend.<br></br>
-              <br></br>
-              Aujourd'hui ouvert aux opportunités sur <span>Lyon</span> et
-              disponible pour vous accompagner dans vos développements de
-              projets web.
-            </p>
+              <p>
+                <span>Age </span>
+                {calculateAge("22/12/1991")}
+              </p>
+              <p>
+                <span>Langues </span>Francais, Anglais
+              </p>
 
-            <p>
-              <span>Age </span>
-              {calculateAge("22/12/1991")}
-            </p>
-            <p>
-              <span>Langues </span>Francais, Anglais
-            </p>
+              <p>
+                <span>Téléphone </span>+33 (0)7 71 67 04 64
+              </p>
 
-            <p>
-              <span>Téléphone </span>+33 (0)7 71 67 04 64
-            </p>
-
-            <div className="about__social-bar">
-              {" "}
-              <Link
-                to="https://github.com/Nic0mrt"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <FontAwesomeIcon icon={faGithub} size="2x" />{" "}
-                <p>Visiter mon profil GitHub</p>
-              </Link>
-              <Link
-                to="https://www.linkedin.com/in/nicolas-maret-linkedin"
-                target="_blank"
-                style={{ textDecoration: "none" }}
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />{" "}
-                <p>Visiter mon profil Linkedin</p>
-              </Link>
-            </div>
-          </div>
-        </div>
+              <div className="about__social-bar">
+                {" "}
+                <Link
+                  to="https://github.com/Nic0mrt"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <FontAwesomeIcon icon={faGithub} size="2x" />{" "}
+                  <p>Visiter mon profil GitHub</p>
+                </Link>
+                <Link
+                  to="https://www.linkedin.com/in/nicolas-maret-linkedin"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn} size="2x" />{" "}
+                  <p>Visiter mon profil Linkedin</p>
+                </Link>
+              </div>
+            </Col>
+          </Row>
+        </Container>
 
         <h3>
           Mes <span>compétences</span>
