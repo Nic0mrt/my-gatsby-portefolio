@@ -22,6 +22,13 @@
   align-items: center;
 }
 
+.home__down-icon {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .home h3 {
   text-align: center;
   color: #222222;
@@ -71,6 +78,7 @@
 }
 
 .go-to-btns-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,8 +122,19 @@
   margin-left: -1em;
 }
 
+section {
+  padding: 30px 30px;
+}
+section span {
+  color: #0ba376;
+  font-weight: bold;
+}
+
 .home__services {
   background-color: #eee;
+}
+.home__services__col {
+  padding: 30px 0;
 }
 
 .home__services__card {
@@ -126,7 +145,7 @@
 
 .home__services__card h4 {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .home__services__card h4::before {
@@ -139,12 +158,39 @@
   width: 40px;
   background-color: #0ba376;
 }
-.home__services span {
-  color: #0ba376;
-  font-weight: bold;
+
+.home__blog__col {
+  padding: 30px 0;
 }
-.home__services {
-  padding: 30px 30px;
+
+.home__blog__card {
+  position: relative;
+  background-color: #222222;
+}
+
+.home__blog__card img {
+  overflow: hidden;
+  transition: transform 0.5s ease !important;
+}
+
+.home__blog__card img:hover {
+  transform: scale(1.2);
+}
+
+.home__blog__card__infos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #22222256;
+  color: white;
+  padding: 10px;
+}
+
+.home__blog__btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 640px) {
@@ -180,11 +226,18 @@
     flex-direction: row;
   }
 
-  .home__services {
+  section {
     padding: 30px 150px;
+  }
+  .home__services__col {
+    padding: 30px;
   }
 
   .home__services__card {
     min-height: 400px;
+  }
+
+  .home__blog__col {
+    padding: 20px;
   }
 }

@@ -1,16 +1,19 @@
 import React, { useRef, useEffect } from "react"
 import "./home.css"
 import SEO from "../components/seo"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import bg from "../images/home-bg.svg"
 import { TweenMax } from "gsap"
 import { Timeline } from "gsap/gsap-core"
 import { Container, Row, Col } from "reactstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons"
+import Button from "../components/layouts/Button"
+import Img from "gatsby-image"
 
-const Home = () => {
+const Home = ({ data }) => {
   const image = useRef(null)
   const content = useRef(null)
   const buttons = useRef(null)
@@ -46,7 +49,7 @@ const Home = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="home">
+      <section className="home">
         <Container fluid={true}>
           <Row>
             <Col xs="12" lg="6" className="home__image__container">
@@ -83,27 +86,30 @@ const Home = () => {
                   </i>
                 </div>
                 <div className="go-to-btns-wrapper" ref={buttons}>
-                  <Link to="/Projects" style={{ textDecoration: "none" }}>
-                    <div className="btn">Mes Projets</div>
-                  </Link>
-                  <Link to="/About" style={{ textDecoration: "none" }}>
-                    <div className="btn">
-                      <span>Mon profil</span>
-                    </div>
-                  </Link>
+                  <Button link={"/Projects"} width={"160px"}>
+                    Mes projets
+                  </Button>
+                  <Button link={"/About"} width={"160px"}>
+                    Voir mon profil
+                  </Button>
+                  <FontAwesomeIcon
+                    className="home__down-icon"
+                    icon={faChevronDown}
+                    size="1x"
+                  />
                 </div>
               </div>
             </Col>
           </Row>
         </Container>
-      </div>
-      <div className="home__services">
+      </section>
+      <section className="home__services">
         <h3>
           Mes <span>services</span>
         </h3>
         <Container fluid={true}>
           <Row>
-            <Col style={{ padding: "30px" }} xs="12" xl="4">
+            <Col className="home__services__col" xs="12" xl="4">
               <div className="home__services__card">
                 <h4>En régie</h4>
                 <p>
@@ -126,7 +132,7 @@ const Home = () => {
                 </p>
               </div>
             </Col>
-            <Col style={{ padding: "30px" }} xs="12" xl="4">
+            <Col className="home__services__col" xs="12" xl="4">
               <div className="home__services__card">
                 <h4>Au forfait</h4>
                 <p>
@@ -143,7 +149,7 @@ const Home = () => {
                 </p>
               </div>
             </Col>
-            <Col style={{ padding: "30px" }} xs="12" xl="4">
+            <Col className="home__services__col" xs="12" xl="4">
               <div className="home__services__card">
                 <h4>Sites web professionnels</h4>
                 <p>
@@ -163,9 +169,90 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </section>
+
+      <section className="home__blog">
+        <h3>
+          Derniers articles de mon <span>blog</span>
+        </h3>
+
+        <Container fluid={true}>
+          <Row>
+            <Col className="home__blog__col" xs="12" xl="6">
+              <div className="home__blog__card">
+                <Link
+                  to={`/article/${data.allStrapiArticle.edges[0].node.slug}`}
+                >
+                  <Img
+                    style={{ maxHeight: "300px" }}
+                    imgStyle={{ objectFit: "cover" }}
+                    fluid={
+                      data.allStrapiArticle.edges[0].node.image.childImageSharp
+                        .fluid
+                    }
+                    alt={data.allStrapiArticle.edges[0].node.slug}
+                  />
+                </Link>
+                <div className="home__blog__card__infos">
+                  <h4>{data.allStrapiArticle.edges[0].node.title}</h4>
+                </div>
+              </div>
+            </Col>
+            <Col className="home__blog__col" xs="12" xl="6">
+              <div className="home__blog__card">
+                <Link
+                  to={`/article/${data.allStrapiArticle.edges[0].node.slug}`}
+                >
+                  <Img
+                    style={{ maxHeight: "300px" }}
+                    imgStyle={{ objectFit: "cover" }}
+                    fluid={
+                      data.allStrapiArticle.edges[1].node.image.childImageSharp
+                        .fluid
+                    }
+                    alt={data.allStrapiArticle.edges[1].node.slug}
+                  />
+                </Link>
+
+                <div className="home__blog__card__infos">
+                  <h4>{data.allStrapiArticle.edges[1].node.title}</h4>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <div className="home__blog__btn-wrapper">
+          <Button link={"/Blog"} width={"200px"}>
+            Voir tous mes articles
+          </Button>
+        </div>
+      </section>
     </Layout>
   )
 }
+
+export const homeBlogQuery = graphql`
+  query homeBlogQuery {
+    allStrapiArticle(sort: { fields: published_at, order: DESC }) {
+      edges {
+        node {
+          strapiId
+          title
+          image {
+            publicURL
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          slug
+          description
+          published_at
+        }
+      }
+    }
+  }
+`
 
 export default Home
