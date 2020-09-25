@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 20px;
   height: 100vh;
   padding: 50px 0;
+  position: relative;
 }
 
 .home__image__container {
@@ -13,6 +13,10 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
+}
+
+.home__image__container img {
+  max-height: 400px;
 }
 
 .home__content__container {
@@ -24,9 +28,7 @@
 
 .home__down-icon {
   position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 15px;
 }
 
 .home h3 {
@@ -78,7 +80,6 @@
 }
 
 .go-to-btns-wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

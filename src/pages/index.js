@@ -92,16 +92,16 @@ const Home = ({ data }) => {
                   <Button link={"/About"} width={"160px"}>
                     Voir mon profil
                   </Button>
-                  <FontAwesomeIcon
-                    className="home__down-icon"
-                    icon={faChevronDown}
-                    size="1x"
-                  />
                 </div>
               </div>
             </Col>
           </Row>
         </Container>
+        <FontAwesomeIcon
+          className="home__down-icon"
+          icon={faChevronDown}
+          size="2x"
+        />
       </section>
       <section className="home__services">
         <h3>
