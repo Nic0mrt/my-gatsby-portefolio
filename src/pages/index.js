@@ -262,7 +262,7 @@ const Home = ({ data }) => {
           </Row>
         </Container>
         <div className="home__blog__btn-wrapper">
-          <Button link={"/Blog"} width={"200px"}>
+          <Button link={"/Projects"} width={"200px"}>
             Voir tous mes articles
           </Button>
         </div>
