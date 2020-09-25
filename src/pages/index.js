@@ -121,7 +121,7 @@ const Home = ({ data }) => {
                   <span>
                     <strong>Node.JS</strong>
                   </span>{" "}
-                  pour renforcer vos équipes sur un projet ? <br />
+                  pour renforcer vos équipes sur un projet? <br />
                   <br />
                   Je suis intéressé par des missions frontend et/ou backend pour
                   vous apporter mes compétences.
@@ -154,7 +154,7 @@ const Home = ({ data }) => {
                 <h4>Sites web professionnels</h4>
                 <p>
                   Vous avez besoin de visibilité sur internet et vous pensez à
-                  un site web ?
+                  un site web?
                   <br />
                   Nous définirons ensemble votre besoin du design au
                   référencement.
@@ -169,6 +169,46 @@ const Home = ({ data }) => {
             </Col>
           </Row>
         </Container>
+      </section>
+
+      <section className="home__projects">
+        <h4>
+          Mes{" "}
+          <span>
+            <strong> projets</strong>
+          </span>
+        </h4>
+        <Container fluid={true}>
+          <Row>
+            {data.allMarkdownRemark.edges.map(project => {
+              return (
+                <Col xs="12" xl="4" className="home__projects__col">
+                  <div className="home__projects__card">
+                    <Link to={`/project/${project.node.frontmatter.slug}`}>
+                      <Img
+                        style={{ maxHeight: "400px" }}
+                        imgStyle={{ objectFit: "cover" }}
+                        fluid={
+                          project.node.frontmatter.featuredImage.childImageSharp
+                            .fluid
+                        }
+                        alt={project.node.frontmatter.slug}
+                      />
+                    </Link>
+                    <div className="home__projects__card__infos">
+                      <h4>{project.node.frontmatter.title}</h4>
+                    </div>
+                  </div>
+                </Col>
+              )
+            })}
+          </Row>
+        </Container>
+        <div className="home__projects__btn-wrapper">
+          <Button link={"/Blog"} width={"200px"}>
+            Voir tous mes projets
+          </Button>
+        </div>
       </section>
 
       <section className="home__blog">
@@ -231,12 +271,11 @@ const Home = ({ data }) => {
   )
 }
 
-export const homeBlogQuery = graphql`
-  query homeBlogQuery {
+export const homeQuery = graphql`
+  query homeQuery {
     allStrapiArticle(sort: { fields: published_at, order: DESC }) {
       edges {
         node {
-          strapiId
           title
           image {
             publicURL
@@ -247,8 +286,23 @@ export const homeBlogQuery = graphql`
             }
           }
           slug
-          description
-          published_at
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            slug
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }
