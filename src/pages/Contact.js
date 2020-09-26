@@ -101,9 +101,11 @@ const Contact = () => {
         <p className="contact-paragraph">
           {" "}
           Un projet front end en <span>React</span> à me confier ou en back end{" "}
-          <span>Express</span> ? Besoin d'un développeur <span>Javascript</span>{" "}
-          fullstack? N'hésitez pas à me joindre en me laissant vos coordonnées,
-          je vous recontacterai au plus vite !{" "}
+          <span>Express</span>?
+          <br />
+          Besoin d'un développeur <span>Javascript</span> fullstack? N'hésitez
+          pas à me joindre en me laissant vos coordonnées, je vous recontacterai
+          au plus vite !{" "}
         </p>
 
         <form

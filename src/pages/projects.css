@@ -55,6 +55,12 @@
 
 @media screen and (min-width: 640px) {
   .projects-section {
+    padding: 160px 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projects-section {
     padding: 160px 150px;
   }
 }
