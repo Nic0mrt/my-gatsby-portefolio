@@ -47,6 +47,10 @@ const Article = ({ data }) => {
         <div className="article__content">
           <ReactMarkdown source={article.content} />
         </div>
+
+        <Button width="160px" link="/Blog" newTab={false}>
+          Retour au blog
+        </Button>
       </div>
     </Layout>
   )
