@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import Layout from "../components/Layout"
 import Img from "gatsby-image"
+import Button from "../components/layouts/Button"
 
 export const query = graphql`
   query ArticleQuery($id: String) {

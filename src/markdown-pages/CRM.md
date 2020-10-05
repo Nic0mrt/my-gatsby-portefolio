@@ -4,7 +4,7 @@ date: "2020-09-26"
 title: "Mon CRM perso avec React et Typescript"
 presentation: "Gestion de clients et factures avec React"
 featuredImage: ../images/projects/CRM-presentation.png
-alt: "mon site gatsby et react"
+alt: "code source CRM avec Typescript React Node.JS et MongoDB"
 skills: [Typescript, React, Express, MongoDB, MaterialUI]
 github: "https://github.com/Nic0mrt/my-CRM-with-react-and-typescript"
 ---

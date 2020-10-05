@@ -107,9 +107,14 @@ const Header = props => {
           </Link>
         </li>
       </ul>
-      <a href={cv} target="_blank" className="menu__download__link">
+      <Link
+        href={cv}
+        target="_blank"
+        rel="noreferrer"
+        className="menu__download__link"
+      >
         <div className="menu__download-btn">Télécharger CV</div>
-      </a>
+      </Link>
 
       <div className="menu__copyright">
         all rights reserved. Made with React and Gatsby

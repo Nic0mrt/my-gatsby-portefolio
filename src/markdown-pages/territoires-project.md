@@ -5,9 +5,9 @@ title: "Gestion de territoires"
 presentation: "Application de gestion d'attribution de territoires
   géographiques avec gestion serveur"
 featuredImage: ../images/projects/territoires-presentation.png
-alt: "gestion de territoires avec Svelte et Mapbox"
+alt: "gestion de territoires avec Svelte Node.JS MongoDB et Mapbox"
 skills: [Javascript, Svelte, Mapbox, Express, Bootstrap]
-github: https://github.com/Spartack/Territories
+github: https://github.com/Nic0mrt/Territories
 ---
 
 <br><br>

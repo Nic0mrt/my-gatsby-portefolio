@@ -266,6 +266,11 @@ section span {
   section {
     padding: 50px 150px;
   }
+
+  .home__image__container img {
+    max-height: 550px;
+  }
+
   .home__services__col {
     padding: 30px;
   }

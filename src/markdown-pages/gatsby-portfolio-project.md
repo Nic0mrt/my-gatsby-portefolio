@@ -5,9 +5,9 @@ title: "Mon portfolio en Gatsby et React"
 presentation: "Site portfolio entièrement responsive avec un générateur
   de sites statiques"
 featuredImage: ../images/projects/portfolio-v1-presentation.png
-alt: "mon site gatsby et react"
+alt: "code source de mon site gatsby et react avec Stapi"
 skills: [javascript, React, Gatsby, Strapi, Bootstrap]
-github: "https://github.com/Spartack/my-gatsby-portefolio"
+github: "https://github.com/Nic0mrt/my-gatsby-portefolio"
 ---
 
 <br><br>

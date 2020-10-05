@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Moment from "react-moment"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import "./projectTemplate.css"
 import Img from "gatsby-image"
@@ -12,20 +11,16 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   const featuredImage = frontmatter.featuredImage.childImageSharp.fluid
   const alt = frontmatter.alt
+  const githubLink = frontmatter.github
 
   return (
     <Layout>
       <div className="project-section">
         <h3>{frontmatter.title} </h3>
-        <div>
-          <Moment locale="fr" format="Do MMMM YYYY">
-            {frontmatter.date}
-          </Moment>
-        </div>
         <Img fluid={featuredImage} alt={alt}></Img>
-        <a href={frontmatter.github} alt="lien vers mon code github">
-          {frontmatter.github}
-        </a>
+        <Link to={githubLink} alt={alt} target="_blank" rel="noreferrer">
+          Voir le code source sur Github
+        </Link>
         <div
           className="project-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -43,6 +38,8 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         slug
         title
+        github
+        alt
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {

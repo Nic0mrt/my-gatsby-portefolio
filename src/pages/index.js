@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef } from "react"
 import "./home.css"
 import SEO from "../components/seo"
 import Layout from "../components/Layout"
@@ -25,7 +25,7 @@ const Home = ({ data }) => {
       <section className="home">
         <Container fluid={true}>
           <Row>
-            <Col xs="12" lg="6" className="home__image__container">
+            <Col xs="12" lg="7" className="home__image__container">
               <Tween
                 from={{ x: "-200px", opacity: 0, rotation: 0.01 }}
                 to={{ x: "0", opacity: 1, rotation: 0.01 }}
@@ -39,7 +39,7 @@ const Home = ({ data }) => {
                 ></img>
               </Tween>
             </Col>
-            <Col xs="12" lg="6" className="home__content__container">
+            <Col xs="12" lg="5" className="home__content__container">
               <Timeline
                 target={
                   <>
@@ -364,6 +364,7 @@ const Home = ({ data }) => {
                   </Col>
                 )
               }
+              return null
             })}
           </Row>
         </Container>
