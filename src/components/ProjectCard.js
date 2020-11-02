@@ -6,10 +6,9 @@ import { Col } from "reactstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
   return (
-    <Col sm="12" lg="6">
-      {" "}
+    <Col sm="12" lg="6" id={`${index}`}>
       <Link
         to={`/project/${project.frontmatter.slug}`}
         style={{ textDecoration: "none", color: "black" }}

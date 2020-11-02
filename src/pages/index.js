@@ -13,10 +13,18 @@ import Img from "gatsby-image"
 import { Controller, Scene } from "react-scrollmagic"
 import { Tween, Timeline } from "react-gsap"
 
+const scrollToRef = ref => {
+  window.scrollTo(0, ref.current.offsetTop - 130)
+}
+
 const Home = ({ data }) => {
   const image = useRef(null)
-
   const buttons = useRef(null)
+  const services = useRef(null)
+
+  const excecuteScroll = () => {
+    scrollToRef(services)
+  }
 
   return (
     <Layout>
@@ -49,7 +57,7 @@ const Home = ({ data }) => {
                       </h3>
                       <h1>
                         {" "}
-                        Développeur Fullstack <br></br> React & NodeJS Freelance
+                        Développeur Fullstack <br></br> React & NodeJS
                       </h1>
                       <p>
                         Passionné par le web, je vous accompagne sur vos projets
@@ -96,12 +104,13 @@ const Home = ({ data }) => {
           </Row>
         </Container>
         <FontAwesomeIcon
+          onClick={excecuteScroll}
           className="home__down-icon"
           icon={faChevronDown}
           size="1x"
         />
       </section>
-      <section className="home__services" id="services">
+      <section className="home__services" id="services" ref={services}>
         <Controller>
           <Scene
             duration={200}

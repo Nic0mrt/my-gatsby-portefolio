@@ -16,15 +16,7 @@ github: https://github.com/Nic0mrt/Territories
 
 <br>
 
-##### Technologies utilisées
-
-- Javascript
-- Svelte JS
-- Express
-- MongoDB
-- Bootstrap
-- Mapbox
-- Authentification avec JWT tokens
+#####
 
 <br>
 
@@ -73,4 +65,4 @@ github: https://github.com/Nic0mrt/Territories
 
 - Gestion des utilisateurs en tant qu'admin
 
-![vue en détail d'un territoire](../images/projects/territoires/vue-users.png)
+![vue de la page admin utilisateurs](../images/projects/territoires/vue-users.png)

@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import "./projects.css"
 import { Container, Row } from "reactstrap"
 import ProjectCard from "../components/ProjectCard"
+import { Controller, Scene } from "react-scrollmagic"
 
 const Projects = ({ data }) => {
   return (
@@ -16,8 +17,8 @@ const Projects = ({ data }) => {
         <div className="projects-list">
           <Container>
             <Row>
-              {data.allMarkdownRemark.edges.map(project => {
-                return <ProjectCard project={project.node} />
+              {data.allMarkdownRemark.edges.map((project, index) => {
+                return <ProjectCard project={project.node} index={`${index}`} />
               })}
             </Row>
           </Container>
